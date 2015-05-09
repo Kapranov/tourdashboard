@@ -1,0 +1,150 @@
+.l-wrap--blog__post_micropost {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+.ad--micropost {
+  margin-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  border: 2px solid #fb755a;
+  background-image: url("tourist.jpg");
+}
+
+.ad--micropost:before {
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-size: cover;
+  opacity: 0;
+}
+
+.ad--micropost:hover:before {
+  opacity: 1;
+}
+
+.ad--micropost:hover .ad__text_agency {
+  color: #fb755a;
+}
+
+.ad--micropost:hover .ad__text_micropost:before, .ad--micropost:hover .ad__text_micropost:after {
+  background-color: #ffffff;
+}
+
+.ad--micropost:before {
+  background-color: #ffffff;
+}
+
+.ad__text_micropost {
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-property: color;
+  -moz-transition-property: color;
+  -o-transition-property: color;
+  transition-property: color;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  position: relative;
+  max-width: 385px;
+  width: 90%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 1.33;
+}
+
+@media (min-width: 500px) {
+  .ad__text_micropost:after, .ad__text_micropost:before {
+    display: inline-block;
+    position: relative;
+    height: 6px;
+    width: 6px;
+    content: "";
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #fb755a;
+  }
+
+  .ad__text_micropost:after {
+    top: 15px;
+    right: -30px;
+  }
+
+  .ad__text_micropost:before {
+    top: 15px;
+    left: -30px;
+  }
+}
+
+.ad__text_micropost:before, .ad__text_micropost:after {
+  background-color: #ffffff;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+}
+
+@media (min-width: 500px) {
+  .ad__text_micropost:before, .ad__text_micropost:after {
+    position: absolute;
+  }
+}
+
+.blueBtnBordered, a.blueBtnBordered {
+  border-color: #028ED5;
+  color: #028ED5;
+}
+
+.btnBordered {
+  color: #028ed5;
+  display: inline-block;
+  padding: 12px 21px 13px;
+  border: 1px solid;
+  border-radius: 4px;
+  background: none repeat scroll 0% 0% padding-box transparent;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  line-height: 20px;
+  text-align: center;
+  /* transition: all 0.15s ease-out 0s; */
+  transition: color 0.3s ease-out 0s;
+}
+
+
+.btnbutton {
+  color: #028ED5;
+  text-decoration: none;
+  /* transition: color 0.3s ease-out 0s; */
+  transition: transform 0.9s ease 0s;
+}
+
+.blueBtnBordered:hover, a.blueBtnBordered:hover {
+  background: none repeat scroll 0% 0% #007095;
+  color: #FFF;
+}

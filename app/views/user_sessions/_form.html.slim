@@ -1,0 +1,45 @@
+.row
+  div class="small-12 large-12 columns"
+    .signup-panel
+      .row.collapse
+        = form_tag user_sessions_path, :method => :post do
+          div style="display:none"
+          div class=["row", "collapse"]
+            div class=["small-2", "columns"]
+              span class=["prefix"]
+                i class=["fi-mail", "size-18"]
+            div class=["small-10", "columns", "field"]
+              = text_field_tag :email, params[:email], placeholder: t('Email')
+            div class=["row", "collapse"]
+              div class=["small-2", "columns"]
+                span class=["prefix"]
+                  i class=["fi-lock", "size-18"]
+              div class=["small-10", "columns", "field"]
+                = password_field_tag :password, params[:password], placeholder: t('password')
+            div class=["large-12 columns"] style="width:350px;height: 50px;"
+              = submit_tag t('input'), class: "button [ expand small ]"
+              /i class=["fi-telephone-accessible", "size-22"] style="color:#ffffff;margin-left:15pt"
+              /'
+              /i class=["fi-social-skype", "size-22"] style="color:#ffffff;margin-left:5pt"
+              /'
+              /i class=["fi-social-facebook", "size-22"] style="color:#ffffff;margin-left:5pt"
+              /'
+              /i class=["fi-social-linkedin", "size-22"] style="color:#ffffff;margin-left:5pt"
+              /'
+              /i class=["fi-social-yahoo", "size-22"] style="color:#ffffff;margin-left:5pt"
+              /'
+              /i class=["fi-social-google-plus", "size-22"] style="color:#ffffff;margin-left:5pt"
+              /'
+              /i class=["fi-social-youtube", "size-22"] style="color:#ffffff;margin-left:5pt"
+              /'
+              /i class=["fi-social-github", "size-22"] style="color:#ffffff;margin-left:5pt"
+              /'
+              /i class=["fi-social-flickr", "size-22"] style="color:#ffffff;margin-left:5pt"
+              /'
+              /i class=["fi-social-twitter", "size-22"] style="color:#ffffff;margin-left:5pt"
+              /'
+              /i class=["fi-web", "size-22"] style="color:#ffffff;margin-left:5pt"
+              /'
+              /i class=["fi-mail", "size-22"] style="color:#ffffff;margin-left:5pt"
+              /'
+              /i class=["fi-rss", "size-22"] style="color:#ffffff;margin-left:5pt"

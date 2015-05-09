@@ -1,0 +1,347 @@
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+:-moz-any-link:focus {
+  outline: none;
+}
+
+:-webkit-any-link:focus {
+  outline: none;
+}
+
+:any-link:focus {
+  outline: none;
+}
+
+:focus {
+  outline: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+main {
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  cursor: default;
+  font-size: 100%;
+}
+
+.master-wrapper-chat {
+  top: 0px;
+  z-index: 9999 !important;
+  margin: 0px 0px 300px;
+  background: none repeat scroll 0% 0% #FFF;
+  position: relative;
+}
+
+.page-template-page-chat {
+  position: relative;
+}
+
+.page-template-page-chat #chat-index {
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  background: url("nycity.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow-y: auto;
+}
+
+#chat-index {
+  height: 300px;
+  top: 80px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  padding: 0px;
+  margin: 0px;
+}
+
+.l-wrap--blog__post_chat {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+.ad--chat {
+  margin-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  border: 2px solid #fb755a;
+  background-image: url("tourist.jpg");
+}
+
+.ad--chat:before {
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-size: cover;
+  opacity: 0;
+}
+
+.ad--chat:hover:before {
+  opacity: 1;
+}
+
+.ad--chat:hover .ad__text_chat {
+  color: #fb755a;
+}
+
+.ad--chat:hover .ad__text_chat:before, .ad--chat:hover .ad__text_chat:after {
+  background-color: #ffffff;
+}
+
+.ad--chat:before {
+  background-color: #ffffff;
+}
+
+.ad__text_chat {
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-property: color;
+  -moz-transition-property: color;
+  -o-transition-property: color;
+  transition-property: color;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  position: relative;
+  max-width: 385px;
+  width: 90%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 1.33;
+}
+
+@media (min-width: 500px) {
+  .ad__text_chat:after, .ad__text_chat:before {
+    display: inline-block;
+    position: relative;
+    height: 6px;
+    width: 6px;
+    content: "";
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #fb755a;
+  }
+
+  .ad__text_chat:after {
+    top: 15px;
+    right: -30px;
+  }
+
+  .ad__text_chat:before {
+    top: 15px;
+    left: -30px;
+  }
+}
+
+.ad__text_chat:before, .ad__text_chat:after {
+  background-color: #ffffff;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+}
+
+@media (min-width: 500px) {
+  .ad__text_chat:before, .ad__text_chat:after {
+    position: absolute;
+  }
+}
+
+.blueBtnBordered, a.blueBtnBordered {
+  border-color: #028ED5;
+  color: #028ED5;
+}
+
+.btnBordered {
+  display: inline-block;
+  padding: 12px 21px 13px;
+  border: 1px solid;
+  border-radius: 4px;
+  background: none repeat scroll 0% 0% padding-box transparent;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-radius: 0rem;
+  text-decoration: none;
+  line-height: 20px;
+  text-align: center;
+  /* transition: all 0.15s ease-out 0s; */
+  transition: transform 0.9s ease 0s;
+}
+
+.btnbutton {
+  color: #028ED5;
+  text-decoration: none;
+  /* transition: color 0.3s ease-out 0s; */
+  transition: transform 0.9s ease 0s;
+}
+
+.blueBtnBordered:hover, a.blueBtnBordered:hover {
+  background: none repeat scroll 0% 0% #028ED5;
+  color: #FFF;
+}
+
+#wcont1a .panel {
+  max-height: 650px;
+  overflow-y: scroll;
+}
+
+.travel--banner {
+  margin-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: inline-block;
+  position: relative;
+  width: 825px;
+  height: 150px;
+  border: 2px solid #B6EDFF;
+  background-image: url("travelonline.jpg");
+}
+
+.travel--banner:before {
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-size: cover;
+  opacity: 0;
+}
+
+.travel--banner:hover:before {
+  opacity: 1;
+}
+
+.travel--banner:hover .travel__text_banner {
+  color: #fb755a;
+}
+
+.travel--banner:hover .travel__text_banner:before, .travel--banner:hover .travel__text_banner:after {
+  background-color: #ffffff;
+}
+
+.travel--banner:before {
+  background-color: #ffffff;
+}
+
+.travel__text_banner {
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-property: color;
+  -moz-transition-property: color;
+  -o-transition-property: color;
+  transition-property: color;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  position: relative;
+  max-width: 385px;
+  width: 90%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 1.33;
+}
+
+@media (min-width: 500px) {
+  .travel__text_banner:after, .travel__text_banner:before {
+    display: inline-block;
+    position: relative;
+    height: 6px;
+    width: 6px;
+    content: "";
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #fb755a;
+  }
+
+  .travel__text_banner:after {
+    top: 15px;
+    right: -30px;
+  }
+
+  .travel__text_banner:before {
+    top: 15px;
+    left: -30px;
+  }
+}
+
+.travel__text_banner:before, .travel__text_banner:after {
+  background-color: #ffffff;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+}
+
+@media (min-width: 500px) {
+  .travel__text_banner:before, .travel__text_banner:after {
+    position: absolute;
+  }
+}
+
+.vcard_travel {
+  display: inline-block;
+  margin: 0px 0px 1.25rem;
+  border: 0px solid #DDD;
+  padding: 0.625rem 0.75rem;
+}

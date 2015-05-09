@@ -1,0 +1,929 @@
+uk:
+  views:
+    pagination:
+      previous: "<i class='fi-arrow-left'></i>"
+      next: "<i class='fi-arrow-right'></i>"
+      last: "<i class='fi-arrows-in'></i>"
+      first: "<i class='fi-arrows-out'></i>"
+      truncate: "..."
+  paperclip:
+    invalid_file_size: "Файл должен быть меньше %{max_size} КБ"
+    maximum_user_files_size_exceeded: "Превышен рабмер максимально допустимого обьема файлов для пользователя %{max_files_size} КБ (сейчас занято %{files_size} КБ)"
+    maximum_space_files_size_exceeded: "Превышен рабмер максимально допустимого обьема файлов для рабочего пространства %{max_files_size} КБ (сейчас занято %{files_size} КБ)"
+    # Folder
+    add_file: "Загрузить файл"
+    add_files: "Загрузить файлы"
+    create_folder: "Создать папку"
+    current_file_version: "Текущая версия файла: %{version}"
+
+    folder_created: "Папка создана"
+    folder_destroyed: "Папка удалена"
+    folder_updated: "Папка обновлена"
+    select_files: "Выбрать"
+    upload_files: "Загрузить"
+
+    # Files
+    cant_save_file: "Не могу сохранить файл"
+    create_file: "Создать файл"
+    file_destroyed: "Файл удален"
+    file_created: "Файл сохранен"
+    file_updated: "Файл обновлен"
+
+    # Folders
+    add_button: "Добавить"
+    cancel_button: "Отменить"
+    cant_upload: "Нельзя загружать файлы"
+    delete_button: "Удалить"
+    file_saved: "Файл сохранен"
+    file_destroyed: "Файл удален"
+    folder_destroyed: "Папка удалена"
+    internal_error: "Не удалось сохранить"
+    upload_button: "Загрузить"
+    # End Paperclip
+  Billing system: "Білінгова система"
+  Admin : "Адміністратор"
+  Manager: "Управляючий"
+  User: "Користувач"
+  Main: "Головна"
+  accompanying: "Супроводжуючі: 5 додаткових клієнтів"
+  accompany_one: "Супроводжувач №1"
+  accompany_two: "Супроводжувач №2"
+  accompany_three: "Супроводжувач №3"
+  accompany_four: "Супроводжувач №4"
+  accompany_five: "Супроводжувач №5"
+  Currently active users: "Ви є зареєстрованим користувачем :"
+  Listing users: 'Перелік користувачів'
+  Listing user: "Інформація по користувачу"
+  Edit_Profile: 'Змінити профіль'
+  Username: 'Користувач'
+  Login: 'Ввійти'
+  Logout: 'Вихід'
+  Role: "Група"
+  Select role: "- Виберіть групу  -"
+  New User: "Додати користувача"
+  Password: "Пароль"
+  Password_confirmation: "Підтвердити пароль"
+  Editing user: "Редагувати"
+  Listing countries: "Перелiк країн"
+  Country: "Країна"
+  Countries: "Країни"
+  New Country: "Додати місто"
+  Editing country: "Редагувати країну"
+  Are you sure?: "Ви впевнені?"
+  Listing cities: "Перелiк міст"
+  Listing city: "Перелiк міста"
+  Editing city: "Редагувати місто"
+  Show: "Показати"
+  New City: "Додати місто"
+  City: "Місто"
+  Street: "Вулиця"
+  Post index: "Індекс"
+  country_id: "країна"
+  city: "місто"
+  street: "вулиця"
+  Post index: "Індекс"
+  post index: "Індекс"
+  post_index: "індекс"
+  Listing tourists: "Перелiк клієнтів"
+  Listing tourist: "Інформація по клієнту"
+  Editing tourist: "Редагування клієнта"
+  New tourist: "Новий клієнт"
+  Application: "Заявка"
+  Listing application: "Інформація по заявке"
+  Airlines: "Аеропорти"
+  Tourist: "Турист"
+  Client: "Клієнт"
+  Lastnameua: "Прізвище"
+  Firstnameua: "Ім'я"
+  Middlenameua: "По-батькові"
+  Firstnameen: "Ім'я (анг)"
+  Lastnameen: "Прізвище (анг)"
+  Lastnameen_one: "Супроводжуючі - Прізвище"
+  add_lastnameen: "Прізвище"
+  Firstnameen_one: "Супроводжуючі - Ім'я"
+  add_firstnameen: "Ім'я"
+  Passport_one: "Супроводжуючі - Паспортнi данi"
+  add_passport: "Паспортнi данi"
+  Day_born_one: "Супроводжуючі - Дата народження дд-мм-РРРР"
+  add_day_born: "Дата народження"
+  Phone_mobile_one: "Супроводжуючі - Телефон"
+  add_phone_mobile: "Телефон"
+  Lastnameen_two: "Супроводжуючі - Прізвище"
+  Firstnameen_two: "Супроводжуючі - Ім'я"
+  Passport_two: "Супроводжуючі - Паспортнi данi"
+  Day_born_two: "Супроводжуючі - Дата народження дд-мм-РРРР"
+  Phone_mobile_two: "Супроводжуючі - Телефон"
+  Lastnameen_three: "Супроводжуючі - Прізвище"
+  Firstnameen_three: "Супроводжуючі - Ім'я"
+  Passport_three: "Супроводжуючі - Паспортнi данi"
+  Day_born_three: "Супроводжуючі - Дата народження дд-мм-РРРР"
+  Phone_mobile_three: "Супроводжуючі - Телефон"
+  Lastnameen_four: "Супроводжуючі - Прізвище"
+  Firstnameen_four: "Супроводжуючі - Ім'я"
+  Passport_four: "Супроводжуючі - Паспортнi данi"
+  Day_born_four: "Супроводжуючі - Дата народження дд-мм-РРРР"
+  Phone_mobile_four: "Супроводжуючі - Телефон"
+  Lastnameen_five: "Супроводжуючі - Прізвище"
+  Firstnameen_five: "Супроводжуючі - Ім'я"
+  Passport_five: "Супроводжуючі - Паспортнi данi"
+  Day_born_five: "Супроводжуючі - Дата народження дд-мм-РРРР"
+  Phone_mobile_five: "Супроводжуючі - Телефон"
+  Gender: "Стать"
+  Day born: "Дата народження"
+  Born: "Дата народження у форматі дд-мм-РРРР"
+  Internal passport: "Паспортнi данi"
+  Passport: "Паспортнi данi"
+  Internal suite: "Серiя"
+  Internal number: "№"
+  Internal day issue: "Дата видачi"
+  Citizen: "Громадянство"
+  Foreign suite: "Серiя"
+  Foreign number: "№"
+  Foreign day issue: "Дата видачi у форматі дд-мм-РРРР"
+  foreign day issue: "Дата видачi"
+  Issued by: "Ким виданий"
+  Validity: "Термін дії у форматі дд-мм-РРРР"
+  validity: "Термін дії"
+  House: "Будинок"
+  Apartment: "Квартира"
+  Phone mobile: "Телефон"
+  Phone_mobile: "Телефон мобiльний"
+  phone_mobile: "Мобiльний"
+  Phone_home: "Телефон домашнiй"
+  phone_home: "Домашнiй"
+  Phone_work: "Телефон робочий"
+  phone_work: "Робочий"
+  Email: "Поштова скринька"
+  Skype: "skype"
+  Comment: "Примiтка"
+  Client status: "Статус"
+  Learned from: "Звiдки дiзнався"
+  Msg sms: "Згоден одержувати смс-повiдомлення"
+  Msg mail: "Згоден одержувати e-mail повiдомлення"
+  msg_sms_short: "смс-повiдомлення"
+  msg_mail_short: "e-mail повiдомлення"
+  Edit: "Редагувати"
+  Destroy: "Видалити"
+  Back: "Повернутися"
+  Save: "Зберегти"
+  Ok: "Так"
+  Cancel: "Нi"
+  Please select country: "- Будь ласка, виберіть країну -"
+  select_country: "- Виберіть країну -"
+  avatar: "Вкладені документи :"
+  validate_login: "введіть правильний логін"
+  validate_password: "введіть правильний пароль"
+  New user_session: "Авторизация"
+  login_field: "введiть логiн"
+  password_field: "введiть пароль"
+  username: "Логин"
+  Login: "Логин"
+  password: "Пароль"
+  input: "Вхід"
+  touristdashboard: "Рада з туризму"
+  home: "Головна"
+  Logout: "Вихiд"
+  Edit Profile: "Профiль"
+  button_input: "Вхiд"
+  Male: "М"
+  Female: "Ж"
+  potential_customers: "потенційні"
+  current_customers: "актуальні"
+  select_customers: "- Виберіть -"
+  passport_dip: "ДИП"
+  passport_ozp: "ОЗП"
+  passport_children: "Дитячий"
+  Your_comments: "Ваш коментар"
+  new_customer: "новий клієнт"
+  regular_customer: "постійний клієнт"
+  advice_of_friends: "за порадою друзів"
+  internet: "інтернет"
+  leaflets: "листівки"
+  google: "Google"
+  Document_personal_title: "Документи, що засвідчують особу :"
+  Documnet_foreign_title: "Закордонний паспорт (ОЗП) :"
+  Internal_passport: "Паспорт"
+  Address_tourist: "Адреса фактична :"
+  Customer_contacts: "Телефони :"
+  Customer_econtacts: "Електронна адреса :"
+  Search: "Пошук"
+  search_tourist: "Введіть у пошук - пошта, телефон, прізвище та прізвище супроводжуючих."
+  search_order: "Введіть у пошук - прізвище туриста латиницею."
+  search_agency: "Введіть у пошук - назва агенції, телефон, пошта."
+  Delete: "Видаляти"
+  Delete_uplods: "Видалити завантажений файл"
+  Uplod_files: "Завантажити файл"
+  Listing agencies: "Туристичні агентства"
+  Show agency: "Інформація по агентству"
+  New Agency: "Додати агентство"
+  Touragency: "Туроператор"
+  Agency_name: "Агентства"
+  Phone work: "Телефон"
+  Email one: "Пошта"
+  Editing agency: "Редагувати агентство"
+  New agency: "Додати агентство"
+  agency_name: "Назва агенції"
+  agency_pn: "ІПН"
+  agency_edrpoy: "ЕДРПУ"
+  agency_city: "Місто"
+  agency_street: "Вулиця"
+  agency_post_index: "Індекс"
+  agency_house: "Будинок"
+  agency_apart: "Офіс"
+  city_legal: "Місто"
+  street_legal: "Вулиця"
+  post_index_legal: "Індекс"
+  street_legal: "Вулиця"
+  house_legal: "Будинок"
+  apart_legal: "Офіс"
+  agency_phone_work: "Телефон робочий"
+  agency_phone_mobile: "Телефон мобільний"
+  agency_contact: "Контакти"
+  agency_email_one: "Пошта №1"
+  agency_email_two: "Пошта №2"
+  agency_email_three: "Пошта №3"
+  agency_web: "Персональна сторінка"
+  agency_comment: "Коментар"
+  bank_account: "Банківський розрахунки"
+  bank: "Назва банка"
+  mfo: "МФО"
+  current_account: "Розрахунковий рахунок"
+  contract: "Договір"
+  contract_number: "Номер договору"
+  contract_from: "Від у форматі дд-мм-РРРР"
+  physical_address: "Фізична адреса"
+  legal_address: "Юридична адреса"
+  Order: "Заявка"
+  Non order: "Заявка НЕ СТВОРЕНА. Ви можете її створити через розділ ТУРИСТІВ або через кнопку СТВОРИТИ ЗАЯВКУ"
+  Order done: "ЗАЯВКА ПО КЛІЄНТУ. Для переходу до списку всіх ЗАЯВОК натисніть на банер ПЕРЕЛІК ЗАЯВОК"
+  Listing orders: "Перелік заявок"
+  Editing order: "Редагувати заявку"
+  New order: "Створення заявки"
+  New Order: "Створити заявку"
+  Order id: "Клієнт ID"
+  odd: "№ - "
+  mark: "Мітка"
+  Order day: "Дата заповнення"
+  order_day: "Дата заповнення у форматі дд-мм-РРРР"
+  tour_day_begin: "Дати туру у форматі дд-мм-РРРР"
+  Tour_day_begin: "Початок туру"
+  tour_day_end: "по, у форматі дд-мм-РРРР"
+  Tour_day_end: "Кінець туру"
+  night: "- Виберіть скільки ночей -"
+  aircross: "Авіапереліт"
+  air_econom: "економ"
+  air_bussness: "бізнес"
+  aircross_begin: "Авіапереліт с у форматі дд-мм-РРРР"
+  aircross_end: "Авіапереліт по у форматі дд-мм-РРРР"
+  airtable: "Авіапереліт з назвою маршруту"
+  airclass: "- Виберете клас посадкового місця -"
+  airclass econom: "економ"
+  airclass bussness: "бізнес"
+  airline: "Назва авіакомпанії"
+  hotel: "Готелі"
+  hotel_begin: "Поселення в готель с у форматі дд-мм-РРРР"
+  hotel_end: "Поселення в готель по у форматі дд-мм-РРРР"
+  hotel_name: "Назва готелю"
+  hotel_class: "- Виберете клас готелю -"
+  hotel_city: "Місто"
+  hotel_class_food: "- Виберете тип харчування -"
+  hotel_room: "Тип кімнати проживання"
+  service: "- Виберете тип послугу -"
+  service_begin: "Послуги c у форматі дд-мм-РРРР"
+  service_end: "Послуги по у форматі дд-мм-РРРР"
+  service_group: "групова"
+  service_personal: "індивідуальна"
+  medecal_order: "Медстраховка"
+  medical_begin: "Медстраховка с у форматі дд-мм-РРРР"
+  medical_end: "Медстраховка по у форматі дд-мм-РРРР"
+  visa_begin: "Віза з у форматі дд-мм-РРРР"
+  visa_end: "Віза по у форматі дд-мм-РРРР"
+  visa: "- Виберіть потрібна ли віза -"
+  visa_need: "потрібно"
+  visa_nonneed: "не потрібно"
+  agency_id: "Назва агентства"
+  payment_for: "Вартість для клієнта тура"
+  payment_tour: "Тура"
+  Payment_tour: "Вартість туру"
+  sell_tour: "Знижка"
+  operator: "До оплати оператору"
+  in_total: "Разом"
+  paid: "Оплачено"
+  debt: "Борг"
+  currency_value: " - Оберіть валюту -"
+  tourist_id: "- Виберете потрібного туриста -"
+  country_id: "- Оберіть країну -"
+  Aircompanies: "Авіакомпанії"
+  customer_id: "№"
+  customer_name: "Клієнт"
+  Forum: "Форум "
+  Forum edit: "Форум редагувати"
+  Listing microposts: "Список відгуків"
+  New Micropost: "Створити відгук"
+  created_at: "Створений"
+  updated_at: "Оновлено"
+  review: "Відгуки"
+  review_short: "Відгук"
+  email: "Пошта"
+  author: "Автор"
+  show micropost: "Відгук користувача"
+  editing micropost: "Редагування користувача"
+  Reviews and comments: "Відгуки та коментарі"
+  New Comment: "Створити відгук"
+  Create a new Micropost: "Створити відгук"
+  Order cash: "Касовый ордер"
+  AD: "Андорра"
+  AE: "Об’єднані Арабські Емірати"
+  AF: "Афганістан"
+  AG: "Антигуа і Барбуда"
+  AI: "Ангілья"
+  AL: "Албанія"
+  AM: "Вірменія"
+  AN: "Нідерландські Антильські острови"
+  AO: "Ангола"
+  AQ: "Антарктида"
+  AR: "Аргентина"
+  AS: "Американське Самоа"
+  AT: "Австрія"
+  AU: "Австралія"
+  AW: "Аруба"
+  AX: "Аландські острови"
+  AZ: "Азербайджан"
+  BA: "Боснія та Герцеговина"
+  BB: "Барбадос"
+  BD: "Бангладеш"
+  BE: "Бельгія"
+  BF: "Буркіна-Фасо"
+  BG: "Болгарія"
+  BH: "Бахрейн"
+  BI: "Бурунді"
+  BJ: "Бенін"
+  BL: "Сен-Бартельмі"
+  BM: "Бермуди"
+  BN: "Бруней"
+  BO: "Болівія"
+  BQ: "Бонайре, Сінт-Естатіус і Саба"
+  BR: "Бразилія"
+  BS: "Багамські острови"
+  BT: "Бутан"
+  BV: "Острів Буве"
+  BW: "Ботсвана"
+  BY: "Білорусь"
+  BZ: "Беліз"
+  CA: "Канада"
+  CC: "Кокосові (Кілінг) острови"
+  CD: "Конго, демократична республіка"
+  CF: "Центральноафриканська Республіка"
+  CG: "Конго"
+  CH: "Швейцарія"
+  CI: "Кот-д'Івуар"
+  CK: "Острови Кука"
+  CL: "Чилі"
+  CM: "Камерун"
+  CN: "Китай"
+  CO: "Колумбія"
+  CR: "Коста-Рика"
+  CU: "Куба"
+  CV: "Кабо-Верде"
+  CW: "Кюрасао"
+  CX: "Острів Різдва"
+  CY: "Кіпр"
+  CZ: "Чеська республіка"
+  DE: "Німеччина"
+  DJ: "Джибуті"
+  DK: "Данія"
+  DM: "Домініка"
+  DO: "Домініканська республіка"
+  DZ: "Алжир"
+  EC: "Еквадор"
+  EE: "Естонія"
+  EG: "Єгипет"
+  EH: "Західна Сахара"
+  ER: "Еритрея"
+  ES: "Іспанія"
+  ET: "Ефіопія"
+  FI: "Фінляндія"
+  FJ: "Фіджі"
+  FK: "Фолклендські острови (Британія)"
+  FM: "Мікронезія, федеративні штати"
+  FO: "Фарерські острови"
+  FR: "Франція"
+  GA: "Габон"
+  GB: "Великобританія"
+  GD: "Гренада"
+  GE: "Грузія"
+  GF: "Французька Гвіана"
+  GG: "Острів Гернсі"
+  GH: "Гана"
+  GI: "Гібралтар"
+  GL: "Гренландія"
+  GM: "Гамбія"
+  GN: "Гвінея"
+  GP: "Гваделупа"
+  GQ: "Екваторіальна Гвінея"
+  GR: "Греція"
+  GS: "Південна Георгія і Південні Сандвічеві Острови"
+  GT: "Гватемала"
+  GU: "Гуам"
+  GW: "Гвінея-Бісау"
+  GY: "Гайяна"
+  HK: "Гонконг"
+  HM: "Острови Херд і Мак-Дональд"
+  HN: "Гондурас"
+  HR: "Хорватія"
+  HT: "Гаїті"
+  HU: "Угорщина"
+  ID: "Індонезія"
+  IE: "Ірландія"
+  IL: "Ізраїль"
+  IM: "Острів Мен"
+  IN: "Індія"
+  IO: "Британські Території в Індійському океані"
+  IQ: "Ірак"
+  IR: "Іран"
+  IS: "Ісландія"
+  IT: "Італія"
+  JE: "Джерсі"
+  JM: "Ямайка"
+  JO: "Йорданія"
+  JP: "Японія"
+  KE: "Кенія"
+  KG: "Киргизстан"
+  KH: "Камбоджа"
+  KI: "Кірибаті"
+  KM: "Коморські острови"
+  KN: "Сент-Кітс і Невіс"
+  KP: "Північна Корея"
+  KR: "Південна Корея"
+  KW: "Кувейт"
+  KY: "Кайманові острови"
+  KZ: "Казахстан"
+  LA: "Лаоська Народно-Демократична Республіка"
+  LB: "Ліван"
+  LC: "Сент-Люсія"
+  LI: "Ліхтенштейн"
+  LK: "Шрі-Ланка"
+  LR: "Ліберія"
+  LS: "Лесото"
+  LT: "Литва"
+  LU: "Люксембург"
+  LV: "Латвія"
+  LY: "Лівія"
+  MA: "Марокко"
+  MC: "Монако"
+  MD: "Республіка Молдова"
+  ME: "Чорногорія"
+  MF: "Сен-Мартен (французька частина)"
+  MG: "Мадагаскар"
+  MH: "Маршаллові острови"
+  MK: "Македонія"
+  ML: "Малі"
+  MM: "М’янма"
+  MN: "Монголія"
+  MO: "Макао"
+  MP: "Північні Маріанські Острови"
+  MQ: "Мартиніка"
+  MR: "Мавританія"
+  MS: "Монтсеррат"
+  MT: "Мальта"
+  MU: "Маврикій"
+  MV: "Мальдіви"
+  MW: "Малаві"
+  MX: "Мексика"
+  MY: "Малайзія"
+  MZ: "Мозамбік"
+  NA: "Намібія"
+  NC: "Нова Каледонія"
+  NE: "Нігер"
+  NF: "Острів Норфолк"
+  NG: "Нігерія"
+  NI: "Нікарагуа"
+  NL: "Нідерланди"
+  NO: "Норвегія"
+  NP: "Непал"
+  NR: "Науру"
+  NU: "Ніуе"
+  NZ: "Нова Зеландія"
+  OM: "Оман"
+  PA: "Панама"
+  PE: "Перу"
+  PF: "Французька Полінезія"
+  PG: "Папуа-Нова Гвінея"
+  PH: "Філіппіни"
+  PK: "Пакистан"
+  PL: "Польща"
+  PM: "Сен-П'єр і Мікелон"
+  PN: "Піткерн"
+  PR: "Пуерто-Рико"
+  PS: "Палестина, Держава"
+  PT: "Португалія"
+  PW: "Палау"
+  PY: "Парагвай"
+  QA: "Катар"
+  RE: "Реюньйон"
+  RO: "Румунія"
+  RS: "Сербія"
+  RU: "Російська Федерація"
+  RW: "Руанда"
+  SA: "Саудівська Аравія"
+  SB: "Соломонові Острови"
+  SC: "Сейшели"
+  SD: "Судан"
+  SE: "Швеція"
+  SG: "Сінгапур"
+  SH: "Острів Святої Єлени, острів Вознесіння та острови Трістан-да-Кунья"
+  SI: "Словенія"
+  SJ: "Острови Свальбард і Ян Маєн"
+  SK: "Словаччина"
+  SL: "Сьєрра-Леоне"
+  SM: "Сан-Марино"
+  SN: "Сенегал"
+  SO: "Сомалі"
+  SR: "Суринам"
+  SS: "Південний Судан"
+  ST: "Сан-Томе і Принсипі"
+  SV: "Сальвадор"
+  SX: "Сінт-Мартен (голландська частина)"
+  SY: "Сирійська Арабська Республіка"
+  SZ: "Свазіленд"
+  TC: "Острови Теркс і Кайкос"
+  TD: "Чад"
+  TF: "Французькі Південні Території"
+  TG: "Того"
+  TH: "Таїланд"
+  TJ: "Таджикистан"
+  TK: "Токелау"
+  TL: "Східний Тимор"
+  TM: "Туркменістан"
+  TN: "Туніс"
+  TO: "Тонга"
+  TR: "Туреччина"
+  TT: "Тринідад та Тобаго"
+  TV: "Тувалу"
+  TW: "Тайвань"
+  TZ: "Танзанія"
+  UA: "Україна"
+  UG: "Уганда"
+  UM: "Американські Малі Віддалені Острови"
+  US: "США"
+  UY: "Уругвай"
+  UZ: "Узбекистан"
+  VA: "Святий Престол (Ватикан, Місто-Держава)"
+  VC: "Сент-Вінсент і Гренадини"
+  VE: "Венесуела, Боліварська Республіка"
+  VG: "Віргінські острови (Британія)"
+  VI: "Віргінські острови (США)"
+  VN: "В'єтнам"
+  VU: "Вануату"
+  WF: "Уолліс і Футуна"
+  WS: "Самоа"
+  YE: "Ємен"
+  YT: "Майотта"
+  ZA: "Південна Африка"
+  ZM: "Замбія"
+  ZW: "Зімбабве"
+  number:
+    # Used in number_with_delimiter()
+    # These are also the defaults for 'currency', 'percentage', 'precision', and 'human'
+    format:
+      # Sets the separator between the units, for more precision (e.g. 1.0 / 2.0 == 0.5)
+      separator: ","
+      # Delimets thousands (e.g. 1,000,000 is a million) (always in groups of three)
+      delimiter: " "
+      # Number of decimals, behind the separator (the number 1 with a precision of 2 gives: 1.00)
+      precision: 3
+      significant: false
+      strip_insignificant_zeros: false
+
+    # Used in number_to_currency()
+    currency:
+      format:
+        # Where is the currency sign? %u is the currency unit, %n the number (default: $5.00)
+        format: "%n %u"
+        unit: "грн."
+        # These three are to override number.format and are optional
+        separator: ","
+        delimiter: " "
+        precision: 2
+        significant: false
+        strip_insignificant_zeros: false
+
+    # Used in number_to_percentage()
+    percentage:
+      format:
+        # These three are to override number.format and are optional
+        # separator:
+        delimiter: ""
+        # precision:
+
+    # Used in number_to_precision()
+    precision:
+      format:
+        # These three are to override number.format and are optional
+        # separator:
+        delimiter: ""
+        # precision:
+
+    # Used in number_to_human_size()
+    human:
+      format:
+        # These three are to override number.format and are optional
+        # separator:
+        delimiter: ""
+        precision: 1
+        significant: false
+        strip_insignificant_zeros: false
+
+      storage_units:
+        # Storage units output formatting.
+        # %u is the storage unit, %n is the number (default: 2 MB)
+        format: "%n %u"
+        units:
+          byte:
+            one:   "байт"
+            few:   "байти"
+            many:  "байтів"
+            other: "байту"
+          kb: "кБ"
+          mb: "МБ"
+          gb: "ГБ"
+          tb: "ТБ"
+          # Rails 3
+      decimal_units:
+        format: "%n %u"
+        units:
+          unit: ""
+          thousand:
+            one: "Тисяча"
+            few: "Тисяч"
+            many: "Тисяч"
+            other: "Тисяч"
+          million:
+            one: "Мільйон"
+            few: "Мільйонів"
+            many: "Мільйонів"
+            other: "Мільйонів"
+          billion:
+            one: "Мільярд"
+            few: "Мільярдів"
+            many: "Мільярдів"
+            other: "Мільярдів"
+          trillion:
+            one: "Трильйон"
+            few: "Трильйонів"
+            many: "Трильйонів"
+            other: "Трильйонів"
+          quadrillion:
+            one: "Кквадрильйон"
+            few: "Квадрильйонів"
+            many: "Квадрильйонів"
+            other: "Квадрильйонів"
+
+  # Used in distance_of_time_in_words(), distance_of_time_in_words_to_now(), time_ago_in_words()
+  datetime:
+    distance_in_words:
+      half_a_minute: "півхвилини"
+      less_than_x_seconds:
+        one:   "менше %{count} секунди"
+        few:   "менше %{count} секунд"
+        many:  "менше %{count} секунд"
+        other: "менше %{count} секунди"
+      x_seconds:
+        one:   "%{count} секунда"
+        few:   "%{count} секунди"
+        many:  "%{count} секунд"
+        other: "%{count} секунди"
+      less_than_x_minutes:
+        one:   "менше %{count} хвилини"
+        few:   "менше %{count} хвилин"
+        many:  "менше %{count} хвилин"
+        other: "менше %{count} хвилини"
+      x_minutes:
+        one:   "%{count} хвилина"
+        few:   "%{count} хвилини"
+        many:  "%{count} хвилин"
+        other: "%{count} хвилини"
+      about_x_hours:
+        one:   "близько %{count} година"
+        few:   "близько %{count} години"
+        many:  "близько %{count} годин"
+        other: "близько %{count} години"
+      x_days:
+        one:   "%{count} день"
+        few:   "%{count} дні"
+        many:  "%{count} днів"
+        other: "%{count} дня"
+      about_x_months:
+        one:   "близько %{count} місяця"
+        few:   "близько %{count} місяців"
+        many:  "близько %{count} місяців"
+        other: "близько %{count} місяця"
+      x_months:
+        one:   "%{count} місяць"
+        few:   "%{count} місяці"
+        many:  "%{count} місяців"
+        other: "%{count} місяця"
+      about_x_years:
+        one:   "близько %{count} року"
+        few:   "близько %{count} років"
+        many:  "близько %{count} років"
+        other: "близько %{count} року"
+      over_x_years:
+        one:   "більше %{count} року"
+        few:   "більше %{count} років"
+        many:  "більше %{count} років"
+        other: "більше %{count} року"
+      almost_x_years:
+        one:   "майже %{count} роки"
+        few:   "майже %{count} років"
+        many:  "майже %{count} років"
+        other: "майже %{count} років"
+
+    prompts:
+      year:   "Рік"
+      month:  "Місяць"
+      day:    "День"
+      hour:   "Година"
+      minute: "Хвилина"
+      second: "Секунда"
+
+  helpers:
+    select:
+      # Default value for :prompt => true in FormOptionsHelper
+      prompt: "- Вибрати -"
+
+    # Default translation keys for submit FormHelper
+    submit:
+      create: 'Створити %{model}'
+      update: 'Зберегти %{model}'
+      submit: 'Зберегти %{model}'
+
+
+  errors:
+    format: "%{attribute} %{message}"
+    # The values :model, :attribute and :value are always available for interpolation
+    # The value :count is available when applicable. Can be used for pluralization.
+    messages:
+      inclusion: "не включено до переліку"
+      exclusion: "зарезервовано"
+      invalid: "недійсний"
+      confirmation: "не збігається з підтвердженням"
+      accepted: "має бути прийнятий"
+      empty: "не може бути порожнім"
+      blank: "не може бути пустим"
+      too_long:
+        one:    "занадто довгий (максимум %{count} знак)"
+        few:    "занадто довгий (максимум %{count} знаки)"
+        many:   "занадто довгий (максимум %{count} знаків)"
+        other:  "занадто довгий (максимум %{count} знаку)"
+      too_short:
+        one:    "занадто короткий (мінімум %{count} знак)"
+        few:    "занадто короткий (мінімум %{count} знаки)"
+        many:   "занадто короткий (мінімум %{count} знаків)"
+        other:  "занадто короткий (мінімум %{count} знаку)"
+      wrong_length:
+        one:    "неправильна довжина (має бути %{count} знак)"
+        few:    "неправильна довжина (має бути %{count} знаки)"
+        many:   "неправильна довжина (має бути %{count} знаків)"
+        other:  "неправильна довжина (має бути %{count} знаку)"
+      taken: "вже зайнятий"
+      not_a_number: "не число"
+      not_an_integer: "не э цілим числом"
+      greater_than: "має бути більше ніж %{count}"
+      greater_than_or_equal_to: "має бути більше ніж або дорівнювати %{count}"
+      equal_to: "має дорівнювати %{count}"
+      less_than: "має бути менше ніж %{count}"
+      less_than_or_equal_to: "має бути менше ніж або дорівнювати %{count}"
+      odd: "має бути непарним"
+      even: "має бути парним"
+      record_invalid: "Виникли помилки: %{errors}"
+
+  activerecord:
+    errors:
+      template:
+        header:
+          one:    "%{model} не збережено через %{count} помилку"
+          few:    "%{model} не збережено через %{count} помилки"
+          many:   "%{model} не збережено через %{count} помилок"
+          other:  "%{model} не збережено через %{count} помилки"
+        # The variable :count is also available
+        body: "Помилки виявлено в таких полях:"
+
+      full_messages:
+        format: "%{attribute} %{message}"
+      # The values :model, :attribute and :value are always available for interpolation
+      # The value :count is available when applicable. Can be used for pluralization.
+      messages:
+        inclusion: "не включено до переліку"
+        exclusion: "зарезервовано"
+        invalid: "недійсний"
+        confirmation: "не збігається з підтвердженням"
+        accepted: "має бути прийнятий"
+        empty: "не може бути порожнім"
+        blank: "не може бути пустим"
+        too_long:
+          one:    "занадто довгий (максимум %{count} знак)"
+          few:    "занадто довгий (максимум %{count} знаки)"
+          many:   "занадто довгий (максимум %{count} знаків)"
+          other:  "занадто довгий (максимум %{count} знаку)"
+        too_short:
+          one:    "занадто короткий (мінімум %{count} знак)"
+          few:    "занадто короткий (мінімум %{count} знаки)"
+          many:   "занадто короткий (мінімум %{count} знаків)"
+          other:  "занадто короткий (мінімум %{count} знаку)"
+        wrong_length:
+          one:    "неправильна довжина (має бути %{count} знак)"
+          few:    "неправильна довжина (має бути %{count} знаки)"
+          many:   "неправильна довжина (має бути %{count} знаків)"
+          other:  "неправильна довжина (має бути %{count} знаку)"
+        taken: "вже зайнятий"
+        not_a_number: "не число"
+        greater_than: "має бути більше ніж %{count}"
+        greater_than_or_equal_to: "має бути більше ніж або дорівнювати %{count}"
+        equal_to: "має дорівнювати %{count}"
+        less_than: "має бути менше ніж %{count}"
+        less_than_or_equal_to: "має бути менше ніж або дорівнювати %{count}"
+        odd: "має бути непарним"
+        even: "має бути парним"
+        record_invalid: "Виникли помилки: %{errors}"
+
+  date:
+    formats:
+      # Use the strftime parameters for formats.
+      # When no format has been given, it uses default.
+      # You can provide other formats here if you like!
+      default: "%d.%m.%Y"
+      short: "%d %b"
+      long: "%d %B %Y"
+
+    day_names:
+      - неділя
+      - понеділок
+      - вівторок
+      - середа
+      - четвер
+      - "п'ятниця"
+      - субота
+    abbr_day_names:
+      - нд.
+      - пн.
+      - вт.
+      - ср.
+      - чт.
+      - пт.
+      - сб.
+
+    # Don't forget the nil at the beginning; there's no such thing as a 0th month
+    month_names:
+      - ~
+      - Січень
+      - Лютий
+      - Березень
+      - Квітень
+      - Травень
+      - Червень
+      - Липень
+      - Серпень
+      - Вересень
+      - Жовтень
+      - Листопад
+      - Грудень
+    abbr_month_names:
+      - ~
+      - січ.
+      - лют.
+      - бер.
+      - квіт.
+      - трав.
+      - черв.
+      - лип.
+      - серп.
+      - вер.
+      - жовт.
+      - лист.
+      - груд.
+    # Used in date_select and datime_select.
+    order:
+      - :day
+      - :month
+      - :year
+
+  time:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%d %b, %H:%M"
+      long: "%d %B %Y, %H:%M"
+    am: "до полудня"
+    pm: "по полудні"
+
+  # Used in array.to_sentence.
+  support:
+    select:
+      prompt: "Оберіть:"
+    array:
+      sentence_connector: "і"
+      skip_last_comma: true
+      words_connector: ", "
+      two_words_connector: " і "
+      last_word_connector: " та "
+

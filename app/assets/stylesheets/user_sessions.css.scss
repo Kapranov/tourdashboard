@@ -1,0 +1,206 @@
+.size-12 { font-size: 12px; }
+.size-14 { font-size: 14px; }
+.size-16 { font-size: 16px; }
+.size-18 { font-size: 18px; }
+.size-20 { font-size: 20px; }
+.size-21 { font-size: 21px; }
+.size-22 { font-size: 22px; }
+.size-24 { font-size: 24px; }
+.size-26 { font-size: 26px; }
+.size-26 { font-size: 26px; }
+.size-28 { font-size: 28px; }
+.size-30 { font-size: 30px; }
+.size-32 { font-size: 32px; }
+.size-34 { font-size: 34px; }
+.size-36 { font-size: 36px; }
+.size-48 { font-size: 48px; }
+.size-60 { font-size: 60px; }
+.size-72 { font-size: 72px; }
+
+.master-wrapper-session {
+  top: 0px;
+  z-index: 9999 !important;
+  margin: 0px 0px 300px;
+  background: none repeat scroll 0% 0% #FFF;
+  position: relative;
+}
+
+.page-template-page-session {
+  position: relative;
+}
+
+.page-template-page-session #user-index {
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  background: url('bg_4-1500.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#user-index {
+  height: 300px;
+  top: 80px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+.panel.transblue {
+  position: absolute;
+  background: rgba(0, 0, 45, 0.5);
+  /* background: none repeat scroll 0 0 #ecfaff; */
+  border-color: #b6edff;
+  border-style: solid;
+  border-width: 1px;
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
+  transform: scale(1.1);
+  transition: all 0.2s ease 0s;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
+
+.top-bar {
+  overflow: hidden;
+  height: 55px;
+  line-height: 40px;
+  position: relative;
+  background: none repeat scroll 0% 0% rgba(0, 80, 200, 0.2);
+  margin-bottom: 0px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+
+/*  Button style Dockyard */
+/*
+
+a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+*/
+
+.l-wrap--blog__post_user {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+.ad--user {
+  margin-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  border: 2px solid #fb755a;
+  background-image: url("ruby.jpg");
+}
+
+.ad--user:before {
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-size: cover;
+  opacity: 0;
+}
+
+.ad--user:hover:before {
+  opacity: 1;
+}
+
+.ad--user:hover .ad__text_user {
+  color: #fb755a;
+}
+
+.ad--user:hover .ad__text_user:before, .ad--user:hover .ad__text_user:after {
+  background-color: #ffffff;
+}
+
+.ad--user:before {
+  background-color: #ffffff;
+}
+
+.ad__text_user {
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-property: color;
+  -moz-transition-property: color;
+  -o-transition-property: color;
+  transition-property: color;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  position: relative;
+  max-width: 360px;
+  width: 90%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 1.33;
+}
+
+@media (min-width: 500px) {
+  .ad__text_user:after, .ad__text_user:before {
+    display: inline-block;
+    position: relative;
+    height: 6px;
+    width: 6px;
+    content: "";
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #fb755a;
+  }
+
+  .ad__text_user:after {
+    top: 15px;
+    right: -30px;
+  }
+
+  .ad__text_user:before {
+    top: 15px;
+    left: -30px;
+  }
+}
+
+.ad__text_user:before, .ad__text_user:after {
+  background-color: #ffffff;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+}
+
+@media (min-width: 500px) {
+  .ad__text_user:before, .ad__text_user:after {
+    position: absolute;
+  }
+}

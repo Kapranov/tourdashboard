@@ -1,0 +1,9 @@
+one:
+  email: MyString
+  crypted_password: MyString
+  salt: MyString
+
+two:
+  email: MyString
+  crypted_password: MyString
+  salt: MyString

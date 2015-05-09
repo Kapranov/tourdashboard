@@ -1,0 +1,16 @@
+.row
+  div class=["large-11", "columns"] style="top:30pt;"
+    = simple_form_for(@micropost) do |f|
+      = f.error_notification
+
+      .form-inputs
+        = f.input :author, label: t('author'), placeholder: t('author')
+        = f.input :email, label: t('email'), placeholder: t('email')
+        = f.input :review, label: t('review'), placeholder: t('review'), input_html: {:style => 'height: 250px'}
+
+      div class=["large-2", "columns"]
+      div class=["large-9", "columns"]
+        .form-actions
+          = f.button :submit, value: t('Save'), class: "button-group btnbutton", style: "width:150px;max-width:100%;height:42px;padding:10px 10px 10px;"
+          '
+          = link_to t('Back'), microposts_path, class: "btnBordered blueBtnBordered btnbutton", style: "width:150px;max-width:100%;height:42px;padding:10px 10px 10px;"

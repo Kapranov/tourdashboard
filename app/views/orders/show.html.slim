@@ -1,0 +1,256 @@
+.row
+  div class=["large-11", "columns"] style="top:30pt"
+    div class="l-wrap--blog__post_order"
+      a class="ad--order" href="/"
+        strong class="ad__text_order size-24" = t('Listing application')
+    .row
+      div class="large-9 columns"
+        .row
+          div class="small-5 columns"
+            label = t('customer_name')
+            div class="row display"
+              div class="small-1 columns size-16"
+                = @order.tourist
+          div class="small-2 columns"
+            label = t('Order id')
+            div class="row display"
+              div class="small-1 columns size-16"
+                = @order.id
+                '
+                =@order.tourist_id
+          div class="large-3 columns"
+            label = t('odd')
+            div class="row display"
+              div class="small-1 columns size-16"
+                = @order.odd
+          div class="large-2 columns"
+            label = t('mark')
+            div class="row display"
+              div class="small-1 columns size-16"
+                = @order.mark
+    .row
+      div class="large-9 columns"
+        .row
+          div class="small-3 columns"
+            label = t('Order day')
+            div class="row display"
+              - if @order.order_day.present?
+                = @order.order_day.to_s(:month_and_year)
+              - else
+                = @order.order_day
+          div class="small-2 columns"
+            label = t('Country')
+            div class="row display"
+              = t(@order.country)
+          div class="small-2 columns"
+            label = t('Tour begin')
+            div class="row display"
+              - if @order.tour_day_begin.present?
+                = @order.tour_day_begin.to_s(:month_and_year)
+              - else
+                = @order.tour_day_begin
+          div class="small-2 columns"
+            label = t('Tour end')
+            div class="row display"
+              - if @order.tour_day_end.present?
+                = @order.tour_day_end.to_s(:month_and_year)
+              - else
+                = @order.tour_day_end
+          div class="small-1 columns"
+            label = t('Night')
+            div class="row display"
+              = @order.night
+    .row
+      div class="large-11 columns"
+        .row
+          div class="small-2 columns"
+            label = t('Aircross begin')
+            div class="row display"
+              - if @order.aircross_begin.present?
+                = @order.aircross_begin.to_s(:month_and_year)
+              - else
+                = @order.aircross_begin
+          div class="small-2 columns"
+            label = t('Aircross end')
+            div class="row display"
+              - if @order.aircross_end.present?
+                = @order.aircross_end.to_s(:month_and_year)
+              - else
+                = @order.aircross_end
+          div class="small-2 columns"
+            label = t('Airtable')
+            div class="row display"
+              = @order.airtable
+          div class="small-2 columns"
+            label = t('Airclass')
+            div class="row display"
+              = @order.airclass
+          div class="small-2 columns"
+            label = t('Airline')
+            div class="row display"
+              = @order.airline
+    .row
+      div class="large-11 columns"
+        .row
+          div class="small-2 columns"
+            label = t('Hotel begin')
+            div class="row display"
+              - if @order.hotel_begin.present?
+                = @order.hotel_begin.to_s(:month_and_year)
+              - else
+                = @order.hotel_begin
+          div class="small-2 columns"
+            label = t('Hotel end')
+            div class="row display"
+              - if @order.hotel_end.present?
+                = @order.hotel_end.to_s(:month_and_year)
+              - else
+                = @order.hotel_end
+          div class="small-3 columns"
+            label = t('Hotel name')
+            div class="row display"
+              = @order.hotel_name
+          div class="small-2 columns"
+            label = t('Hotel class')
+            div class="row display"
+              = @order.hotel_class
+          div class="small-2 columns"
+            label = t('Hotel city')
+            div class="row display"
+              = @order.hotel_city
+    .row
+      div class="large-11 columns"
+        .row
+          div class="small-2 columns"
+            label = t('Hotel class room')
+            div class="row display"
+              = @order.hotel_class_room
+          div class="small-2 columns"
+            label = t('Hotel pay')
+            div class="row display"
+              = @order.hotel_pay
+          div class="small-2 columns"
+            label = t('Service begin')
+            div class="row display"
+              - if @order.service_begin.present?
+                = @order.service_begin.to_s(:month_and_year)
+              - else
+                = @order.service_begin
+          div class="small-2 columns"
+            label = t('Service end')
+            div class="row display"
+              - if @order.service_end.present?
+                = @order.service_end.to_s(:month_and_year)
+              - else
+                = @order.service_end
+          div class="small-2 columns"
+            label = t('Service name')
+            div class="row display"
+              = @order.service_name
+    .row
+      div class="large-11 columns"
+        .row
+          div class="small-2 columns"
+            label = t('Medical begin')
+            div class="row display"
+              - if @order.medical_begin.present?
+                = @order.medical_begin.to_s(:month_and_year)
+              - else
+                = @order.medical_begin
+          div class="small-2 columns"
+            label = t('Medical end')
+            div class="row display"
+              - if @order.medical_end.present?
+                = @order.medical_end.to_s(:month_and_year)
+              - else
+                = @order.medical_end
+          div class="small-8 columns"
+            label = t('Medical name')
+            div class="row display"
+              = @order.medical_name
+    .row
+      div class="large-11 columns"
+        .row
+          div class="small-2 columns"
+            label = t('Visa begin')
+            div class="row display"
+              - if @order.visa_begin.present?
+                = @order.visa_begin.to_s(:month_and_year)
+              - else
+                = @order.visa_begin
+          div class="small-2 columns"
+            label = t('Visa end')
+            div class="row display"
+              - if @order.visa_end.present?
+                = @order.visa_end.to_s(:month_and_year)
+              - else
+                = @order.visa_end
+          div class="small-2 columns"
+            label = t('Visa need')
+            div class="row display"
+              = @order.visa_need
+          div class="small-5 columns"
+            label = t('Agency')
+            div class="row display"
+              = @order.agency.to_s
+    .row
+      div class="large-11 columns"
+        .row
+          div class="small-2 columns"
+            label = t('Payment tour')
+            div class="row display"
+              = @order.payment_tour
+          div class="small-2 columns"
+            label = t('Payment currency')
+            div class="row display"
+              = @order.payment_currency
+          div class="small-2 columns"
+            label = t('Sell tour')
+            div class="row display"
+              = @order.sell_tour
+          div class="small-2 columns"
+            label = t('Sell currency')
+            div class="row display"
+              = @order.sell_currency
+    .row
+      div class="large-11 columns"
+        .row
+          div class="small-2 columns"
+            label = t('Operator')
+            div class="row display"
+              = @order.operator
+          div class="small-2 columns"
+            label = t('Operator currency')
+            div class="row display"
+              = @order.operator_currency
+          div class="small-2 columns"
+            label = t('In total')
+            div class="row display"
+              = @order.in_total
+          div class="small-2 columns"
+            label = t('Total currency')
+            div class="row display"
+              = @order.total_currency
+    .row
+      div class="large-11 columns"
+        .row
+          div class="small-2 columns"
+            label = t('Paid')
+            div class="row display"
+              = @order.paid
+          div class="small-2 columns"
+            label = t('Paid currency')
+            div class="row display"
+              = @order.paid_currency
+          div class="small-2 columns"
+            label = t('Debt')
+            div class="row display"
+              = @order.debt
+          div class="small-2 columns"
+            label = t('Debt currency')
+            div class="row display"
+              = @order.debt_currency
+    br
+    = link_to t('Edit'), edit_tourist_order_path, class: "btnBordered blueBtnBordered btnbutton", style: "width:150px;max-width:100%;height:42px;padding:10px 10px 10px;"
+    '
+    = link_to t('Back'), tourist_orders_path(@order.tourist), class: "btnBordered blueBtnBordered btnbutton", style: "width:150px;max-width:100%;height:42px;padding:10px 10px 10px;"

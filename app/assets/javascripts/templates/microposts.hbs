@@ -1,0 +1,18 @@
+<p>{{#link-to 'microposts.new' class="button expand"}}Створити відгук{{/link-to}}</p>
+
+{{outlet}}
+
+{{#each}}
+   <p>
+   <!-- {{#link-to 'micropost' this}} {{author}} {{/link-to}} -->
+    {{author}}
+    <br>
+    {{review}}
+    <br>
+    <span class="[alert-box info radius] [round radius] label">
+      <!--  | Оновлено  : {{format-date "HH:mm:ss DD-MM-YYYY" updatedAt}} -->
+      Створений: {{format-date "HH:mm:ss DD-MM-YYYY" createdAt}}
+    </span>
+    <hr>
+  </p>
+{{/each}}

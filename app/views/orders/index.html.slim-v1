@@ -1,0 +1,53 @@
+.row
+  div class=["small-centered", "columns"] style="top:30pt;width:900px"
+    div class="l-wrap--blog__post_order"
+      a class="ad--order" href="/"
+        strong class="ad__text_order size-24" = t('Listing orders')
+    div class="row collapse"
+      div class="small-2 large-1 columns"
+        span class="prefix"
+          i class="fi-page-search size-26"
+      div class="small-10 large-11 columns"
+        = form_tag(orders_path, :method => "get", id: "search-form") do
+          = search_field_tag :search, params[:search], placeholder: "#{t('search_order')}", class: 'auto_search'
+          = submit_tag "Search", type: "hidden"
+
+    table class=["large-12"]
+      thead
+        tr
+          th class=["field_left"] width="40"  = t('customer_id')
+          th class=["field_left"] = t('Tourist')
+          th class=["field_left"] width="160" = t('Country')
+          th width="115" = t('Tour_day_begin')
+          th width="115" = t('Tour_day_end')
+          th width="115" = t('Payment_tour')
+          th width="40"
+          th width="40"
+          th width="40"
+      tbody
+        - @orders.each do |order|
+          tr
+            td class=["field_left"] = order.tourist_id
+            td class=["field_left"] = order.tourist
+            td class=["field_left"] = order.country
+            td = order.tour_day_begin
+            td = order.tour_day_end
+            td = order.payment_tour
+            td width="44" = link_to '<i class="fi-results-demographics size-32"></i>'.html_safe, order
+            /td width="44" = link_to '<i class="fi-results-demographics size-32"></i>'.html_safe, {:action => 'show', :id => order.id, :tourist_id => @tourist.id}
+            td width="44" = link_to '<i class="fi-pencil size-24"></i>'.html_safe, edit_order_path(order)
+            td width="44" = link_to '<i class="fi-trash size-24"></i>'.html_safe, order, data: {:confirm => t('Are you sure?')}, :method => :delete
+    table class="small-centered columns" cellspacing="0" cellpadding="0" style="border-collapse: collapse;border: 0px;"
+      tbody
+        td
+          div class="flickr_pagination"
+            = paginate @orders
+    table class="small-centered columns" cellspacing="0" cellpadding="0" style="border-collapse: collapse;border: 0px;width:880px"
+      tbody
+        td
+          ul class="button-group round"
+            li = link_to t('New Order'), new_order_path, class: "btnBordered blueBtnBordered btnbutton", style: "width:155pt"
+            /li = link_to t('New Order'), {:action => 'new', :tourist_id => @tourist.id}, class: "btnBordered blueBtnBordered btnbutton", style: "width:155pt"
+            li = link_to t('Tourist'), tourists_path, class: "btnBordered blueBtnBordered btnbutton", style: "width:150pt"
+            li = link_to t('Agency_name'), agencies_path, class: "btnBordered blueBtnBordered btnbutton", style: "width:150pt"
+            li = link_to t('Forum edit'), microposts_path, class: "btnBordered blueBtnBordered btnbutton", style: "width:155pt"

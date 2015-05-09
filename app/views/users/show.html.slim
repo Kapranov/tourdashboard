@@ -1,0 +1,32 @@
+.row
+  div class=["large-12", "columns"] style="top:30pt"
+    div class="l-wrap--blog__post_user"
+      a class="ad--user" href="/"
+        strong class="ad__text_user size-24" = t('Username')
+    .row
+      div class=["large-12", "large-offset-3", "columns"]
+        .row
+          div class=["large-6", "columns"]
+            label = t('Email')
+            div class="row display"
+              div class="small-3 columns size-16"
+                = @user.email
+    .row
+      div class=["small-6", "large-offset-3", "columns"]
+        .row
+          div class="small-7 columns"
+            label = t('Username')
+            div class="row display"
+              div class="small-2 columns size-16"
+                = @user.username
+          div class="small-5 columns"
+            label = t('Role')
+            div class="row display"
+              div class="small-1 columns size-16"
+                = @user.role
+    br
+    .row
+      div class=["small-7", "large-offset-3", "columns"]
+        = link_to t('Edit'), edit_user_path(@user), class: "btnBordered blueBtnBordered btnbutton", style: "width:150px;max-width:100%;height:42px;padding:10px 10px 10px;"
+        '
+        = link_to t('Back'), users_path, class: "btnBordered blueBtnBordered btnbutton", style: "width:150px;max-width:100%;height:42px;padding:10px 10px 10px;"

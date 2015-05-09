@@ -1,0 +1,48 @@
+= form_for @user do |f|
+  - if @user.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@user.errors.count, "error")} prohibited this user from being saved:"
+      ul
+        - @user.errors.full_messages.each do |message|
+          li = message
+  .row
+    div class=["large-6", "large-offset-3", "columns"]
+      div class="row collapse"
+        div class=["small-3", "large-2", "columns"]
+          span class="prefix"
+            i class="fi fi-mail size-20"
+        div class="small-9 large-10 columns"
+          .field
+            = f.text_field :email, placeholder: t('Email')
+        div class=["small-3", "large-2", "columns"]
+          span class="prefix"
+            i class="fi fi-lock size-20"
+        div class="small-9 large-10 columns"
+          .field
+            = f.password_field :password, placeholder: t('Password')
+        div class=["small-3", "large-2", "columns"]
+          span class="prefix"
+            i class="fi fi-unlock size-20"
+        div class="small-9 large-10 columns"
+          .field
+            = f.password_field :password_confirmation, placeholder: t('Password_confirmation')
+        div class=["small-3", "large-2", "columns"]
+          span class="prefix"
+            i class="fi fi-torso size-20"
+        div class="small-9 large-10 columns"
+          .field
+            = f.text_field :username, placeholder: t('username')
+        div class=["small-3", "large-2", "columns"]
+          span class="prefix"
+            i class="fi fi-widget size-20"
+        div class="small-9 large-10 columns"
+          .field
+            = f.select :role, [ [t('Admin')], [t('Manager')], [t('User')] ], include_blank: false, prompt: t('Select role')
+  .row
+    div class=["small-7", "large-offset-3", "columns"]
+      .actions
+        = f.submit value: t('Save'), class: "btnbutton blueBtnBordered btnbutton", style: "width:150px;max-width: 100%;height:42px;padding: 10px 10px 10px;"
+        '
+        = link_to t('Show'), @user, class: "btnBordered blueBtnBordered btnbutton", style: "width:150px;max-width:100%;height:42px;padding: 10px 10px 10px;"
+        '
+        = link_to t('Back'), users_path, class: "btnBordered blueBtnBordered btnbutton", style: "width:150px;max-width:100%;height:42px;padding:10px 10px 10px;"

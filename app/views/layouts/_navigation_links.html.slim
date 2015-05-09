@@ -1,0 +1,22 @@
+- if current_user
+  span class="button alert" style="top: 0px;margin: 0px 0px 0px 5px"
+    = t('Currently active users')
+    '
+    = current_users_list
+  '
+  = link_to t('Edit_Profile'), edit_user_path(current_user.id), class: "button success tiny", style:"top: 0px;"
+  '
+  = link_to t('Main'), root_path, class: "button tiny", style:"top: 0px;"
+  '
+  = link_to t('Tourist'), tourists_path, class: "button tiny", style:"top: 0px;"
+  '
+  = link_to t('application'), orders_path, class: "button tiny", style:"top: 0px;"
+  '
+  = link_to t('Agency_name'), agencies_path, class: "button tiny", style:"top: 0px;"
+  '
+  '
+  '
+  = link_to t('Logout'), :logout, method: :post, class: "button tiny", style:"top: 0px;"
+- else
+  /= link_to "Register", new_user_path
+  a = link_to t('Login'), :login

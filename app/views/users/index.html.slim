@@ -1,0 +1,24 @@
+.row
+  div class=["large-12", "columns"] style="top:30pt"
+    div class="l-wrap--blog__post_user"
+      a class="ad--user" href="/"
+        strong class="ad__text_user size-24" = t('Listing users')
+    table class=["large-12"]
+      thead
+        tr
+          th = t('Email')
+          th = t('Username')
+          th = t('Role')
+          th width="40"
+          th width="40"
+          th width="40"
+      tbody
+        - @users.each do |user|
+          tr
+            th class=["field_left"] = user.email
+            th class=["field_left"] = user.username
+            th class=["field_left"] = user.role
+            td = link_to '<i class="fi-results-demographics size-32"></i>'.html_safe, user
+            td = link_to '<i class="fi-pencil size-24"></i>'.html_safe, edit_user_path(user)
+            td = link_to '<i class="fi-trash size-24"></i>'.html_safe, user, data: {:confirm => t('Are you sure?')}, :method => :delete
+    = link_to t('New User'), new_user_path, class: "btnBordered blueBtnBordered btnbutton", style: "width:180px;max-width:100%;height:42px;padding:10px 10px 10px;"

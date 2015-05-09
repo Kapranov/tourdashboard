@@ -1,0 +1,40 @@
+.row
+  div class=["large-11", "columns"] style="top:30pt"
+    div class="l-wrap--blog__post_micropost"
+      a class="ad--micropost" href="/"
+        strong class="ad__text_micropost size-22" = t('show micropost')
+    .row
+      div class="large-12 columns"
+        .row
+          div class="small-5 columns"
+            label = t('author')
+            div class="row display"
+              div class="small-12 columns size-14"
+                = @micropost.author
+          div class="small-7 columns"
+            label = t('email')
+            div class="row display"
+              div class="small-12 columns size-14"
+                = @micropost.email
+        .row
+          div class="small-12 columns"
+            label = t('review')
+            div class="row display"
+              div class="small-12 columns size-14"
+                = @micropost.review
+        br
+        .row
+          div class="small-4 columns"
+            label = t('created_at')
+            div class="row display"
+              div class="small-8 columns size-14"
+                = local_time(@micropost.created_at, format: '%H:%M:%S %e/%m/%Y')
+          div class="small-5 columns"
+            label = t('updated_at')
+            div class="row display"
+              div class="small-9 columns size-14"
+                = local_time(@micropost.updated_at, format: '%H:%M:%S %e/%m/%Y')
+    br
+    = link_to t('Edit'), edit_micropost_path(@micropost), class: "btnBordered blueBtnBordered btnbutton", style: "width:150px;max-width:100%;height:42px;padding:10px 10px 10px;"
+    '
+    = link_to t('Back'), microposts_path, class: "btnBordered blueBtnBordered btnbutton", style: "width:150px;max-width:100%;height:42px;padding:10px 10px 10px;"

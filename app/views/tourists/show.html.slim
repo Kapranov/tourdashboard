@@ -1,0 +1,466 @@
+.row
+  div class=["large-12", "columns"] style="top:30pt"
+    div class="l-wrap--blog__post_tourist"
+      a class="ad--tourist" href="/"
+        strong class="ad__text_tourist size-24" = t('Listing tourist')
+    .row
+      div class="large-3 columns"
+        .row
+          div class="large-7 columns"
+            label = t('Client')
+            div class="row display" style="width:90pt"
+              div class="small-1 columns size-16"
+                  = @tourist.client
+    .row
+      div class="large-10 columns"
+        .row
+          div class="large-5 columns"
+            label = t('Lastnameua')
+            div class="row display"
+              div class="small-4 columns size-16" = @tourist.lastname_ua
+          div class="large-3 columns"
+            label = t('Firstnameua')
+            div class="row display"
+              div class="small-4 columns size-16" = @tourist.firstname_ua
+          div class="large-4 columns"
+            label = t('Middlenameua')
+            div class="row display" 
+              div class="small-4 columns size-16" = @tourist.middlename_ua
+    hr
+    .row
+      div class="large-10 columns"
+        .row
+          div class="large-5 columns"
+            label = t('Lastnameen')
+            div class="row display"
+              div class="small-3 columns size-16" = @tourist.lastname_en
+          div class="large-3 columns"
+            label = t('Firstnameen')
+            div class="row display"
+              div class="small-3 columns size-16" = @tourist.firstname_en
+          div class="large-3 columns"
+            label = t('Day born')
+            div class="row display"
+              - if @tourist.day_born.present?
+                div class="small-3 columns size-16"
+                  = @tourist.day_born.to_s(:month_and_year)
+              - else
+                div class="small-3 columns size-16"
+                  = @tourist.day_born
+          div class="large-1 columns"
+            label = t('Gender')
+            div class="row display" style="width:35pt"
+              div class="small-1 columns size-16" = @tourist.gender
+    hr
+    dl
+      .accordion.data-accordion
+      dd
+        a href="#panel1"
+          i class="fi-arrows-out size-16" style="float:right"
+          '
+          = t('accompanying')
+        div id="panel1" class="content panel"
+          h6 class="alert-base custom-bg " = t('accompany_one')
+          .row
+            div class="large-10 columns"
+              .row
+                div class="large-5 columns"
+                  label = t('add_lastnameen')
+                  div class="row display"
+                    div class="small-5 columns size-16" = @tourist.add_lastname_en_one
+                div class="large-4 columns"
+                  label = t('add_firstnameen')
+                  div class="row display"
+                    div class="small-4 columns size-16"  = @tourist.add_firstname_en_one
+                div class="large-2 columns"
+                  label = t('add_phone_mobile')
+                  div class="row display"
+                    div class="small-4 columns size-16" = @tourist.add_phone_one
+          .row
+            div class="large-11 columns"
+              .row
+                div class="large-2 columns"
+                  label = t('add_passport')
+                  div class="row display"
+                    div class="small-4 columns size-16" = @tourist.add_passport_one
+                div class="large-3 columns"
+                  label = t('add_day_born')
+                  div class="row display"
+                    - if @tourist.add_day_born_one.present?
+                      div class="small-4 columns size-16"
+                        = @tourist.add_day_born_one.to_s(:month_and_year)
+                    - else
+                      div class="small-4 columns size-16"
+                        = @tourist.add_day_born_one
+                div class="large-2 columns"
+                  label = t('foreign day issue')
+                  div class="row display"
+                    - if @tourist.add_passport_day_issue_one.present?
+                      div class="small-3 columns size-16"
+                        = @tourist.add_passport_day_issue_one.to_s(:month_and_year)
+                    - else
+                      div class="small-3 columns size-16"
+                        = @tourist.add_passport_day_issue_one
+                div class="large-2 columns"
+                  label = t('validity')
+                  div class="row display"
+                    - if @tourist.add_passport_validity_one.present?
+                      div class="small-3 columns size-16"
+                        = @tourist.add_passport_validity_one.to_s(:month_and_year)
+                    - else
+                      div class="small-3 columns size-16"
+                        = @tourist.add_passport_validity_one
+                div class="large-2 columns"
+                  label = t('Issued by')
+                  div class="row display"
+                    div class="small-4 columns size-16"
+                      = @tourist.add_issued_by_one
+          h6 class="alert-base custom-bg " = t('accompany_two')
+          .row
+            div class="large-10 columns"
+              .row
+                div class="large-5 columns"
+                  label = t('add_lastnameen')
+                  div class="row display"
+                    div class="small-5 columns size-16"
+                      = @tourist.add_lastname_en_two
+                div class="large-4 columns"
+                  label = t('add_firstnameen')
+                  div class="row display"
+                    div class="small-4 columns size-16"
+                      = @tourist.add_firstname_en_two
+                div class="large-2 columns"
+                  label = t('add_phone_mobile')
+                  div class="row display"
+                    div class="small-3 columns size-16" = @tourist.add_phone_two
+          .row
+            div class="large-11 columns"
+              .row
+                div class="large-2 columns"
+                  label = t('add_passport')
+                  div class="row display"
+                    div class="small-4 columns size-16" = @tourist.add_passport_two
+                div class="large-3 columns"
+                  label = t('add_day_born')
+                  div class="row display"
+                    - if @tourist.add_day_born_two.present?
+                      div class="small-4 columns size-16"
+                        = @tourist.add_day_born_two.to_s(:month_and_year)
+                    - else
+                      div class="small-4 columns size-16"
+                        = @tourist.add_day_born_two
+                div class="large-2 columns"
+                  label = t('foreign day issue')
+                  div class="row display"
+                    - if @tourist.add_passport_day_issue_two.present?
+                      div class="small-3 columns size-16"
+                        = @tourist.add_passport_day_issue_two.to_s(:month_and_year)
+                    - else
+                      div class="small-3 columns size-16"
+                        = @tourist.add_passport_day_issue_two
+                div class="large-2 columns"
+                  label = t('validity')
+                  div class="row display"
+                    - if @tourist.add_passport_validity_two.present?
+                      div class="small-3 columns size-16"
+                        = @tourist.add_passport_validity_two.to_s(:month_and_year)
+                    - else
+                      div class="small-3 columns size-16"
+                        = @tourist.add_passport_validity_two
+                div class="large-2 columns"
+                  label = t('Issued by')
+                  div class="row display"
+                    div class="small-3 columns size-16"
+                      = @tourist.add_issued_by_two
+
+          h6 class="alert-base custom-bg " = t('accompany_three')
+          .row
+            div class="large-10 columns"
+              .row
+                div class="large-5 columns"
+                  label = t('add_lastnameen')
+                  div class="row display"
+                    div class="small-5 columns size-16" = @tourist.add_lastname_en_three
+                div class="large-4 columns"
+                  label = t('add_firstnameen')
+                  div class="row display"
+                    div class="small-4 columns size-16"  = @tourist.add_firstname_en_three
+                div class="large-2 columns"
+                  label = t('add_phone_mobile')
+                  div class="row display"
+                    div class="small-4 columns size-16" = @tourist.add_phone_three
+          .row
+            div class="large-11 columns"
+              .row
+                div class="large-2 columns"
+                  label = t('add_passport')
+                  div class="row display"
+                    div class="small-4 columns size-16" = @tourist.add_passport_three
+                div class="large-3 columns"
+                  label = t('add_day_born')
+                  div class="row display"
+                    - if @tourist.add_day_born_three.present?
+                      div class="small-4 columns size-16"
+                        = @tourist.add_day_born_three.to_s(:month_and_year)
+                    - else
+                      div class="small-4 columns size-16"
+                        = @tourist.add_day_born_three
+                div class="large-2 columns"
+                  label = t('foreign day issue')
+                  div class="row display"
+                    - if @tourist.add_passport_day_issue_three.present?
+                      div class="small-3 columns size-16"
+                        = @tourist.add_passport_day_issue_three.to_s(:month_and_year)
+                    - else
+                      div class="small-3 columns size-16"
+                        = @tourist.add_passport_day_issue_three
+                div class="large-2 columns"
+                  label = t('validity')
+                  div class="row display"
+                    - if @tourist.add_passport_validity_three.present?
+                      div class="small-3 columns size-16"
+                        = @tourist.add_passport_validity_three.to_s(:month_and_year)
+                    - else
+                      div class="small-3 columns size-16"
+                        = @tourist.add_passport_validity_three
+                div class="large-2 columns"
+                  label = t('Issued by')
+                  div class="row display"
+                    div class="small-4 columns size-16"
+                      = @tourist.add_issued_by_three
+          h6 class="alert-base custom-bg " = t('accompany_four')
+          .row
+            div class="large-10 columns"
+              .row
+                div class="large-5 columns"
+                  label = t('add_lastnameen')
+                  div class="row display"
+                    div class="small-5 columns size-16" = @tourist.add_lastname_en_four
+                div class="large-4 columns"
+                  label = t('add_firstnameen')
+                  div class="row display"
+                    div class="small-4 columns size-16"  = @tourist.add_firstname_en_four
+                div class="large-2 columns"
+                  label = t('add_phone_mobile')
+                  div class="row display"
+                    div class="small-4 columns size-16" = @tourist.add_phone_four
+          .row
+            div class="large-11 columns"
+              .row
+                div class="large-2 columns"
+                  label = t('add_passport')
+                  div class="row display"
+                    div class="small-4 columns size-16" = @tourist.add_passport_four
+                div class="large-3 columns"
+                  label = t('add_day_born')
+                  div class="row display"
+                    - if @tourist.add_day_born_four.present?
+                      div class="small-4 columns size-16"
+                        = @tourist.add_day_born_four.to_s(:month_and_year)
+                    - else
+                      div class="small-4 columns size-16"
+                        = @tourist.add_day_born_four
+                div class="large-2 columns"
+                  label = t('foreign day issue')
+                  div class="row display"
+                    - if @tourist.add_passport_day_issue_four.present?
+                      div class="small-3 columns size-16"
+                        = @tourist.add_passport_day_issue_four.to_s(:month_and_year)
+                    - else
+                      div class="small-3 columns size-16"
+                        = @tourist.add_passport_day_issue_four
+                div class="large-2 columns"
+                  label = t('validity')
+                  div class="row display"
+                    - if @tourist.add_passport_validity_four.present?
+                      div class="small-3 columns size-16"
+                        = @tourist.add_passport_validity_four.to_s(:month_and_year)
+                    - else
+                      div class="small-3 columns size-16"
+                        = @tourist.add_passport_validity_four
+                div class="large-2 columns"
+                  label = t('Issued by')
+                  div class="row display"
+                    div class="small-4 columns size-16"
+                      = @tourist.add_issued_by_four
+          h6 class="alert-base custom-bg " = t('accompany_five')
+          .row
+            div class="large-10 columns"
+              .row
+                div class="large-5 columns"
+                  label = t('add_lastnameen')
+                  div class="row display"
+                    div class="small-5 columns size-16" = @tourist.add_lastname_en_five
+                div class="large-4 columns"
+                  label = t('add_firstnameen')
+                  div class="row display"
+                    div class="small-4 columns size-16"  = @tourist.add_firstname_en_five
+                div class="large-2 columns"
+                  label = t('add_phone_mobile')
+                  div class="row display"
+                    div class="small-4 columns size-16" = @tourist.add_phone_five
+          .row
+            div class="large-11 columns"
+              .row
+                div class="large-2 columns"
+                  label = t('add_passport')
+                  div class="row display"
+                    div class="small-4 columns size-16" = @tourist.add_passport_five
+                div class="large-3 columns"
+                  label = t('add_day_born')
+                  div class="row display"
+                    - if @tourist.add_day_born_five.present?
+                      div class="small-4 columns size-16"
+                        = @tourist.add_day_born_five.to_s(:month_and_year)
+                    - else
+                      div class="small-4 columns size-16"
+                        = @tourist.add_day_born_five
+                div class="large-2 columns"
+                  label = t('foreign day issue')
+                  div class="row display"
+                    - if @tourist.add_passport_day_issue_five.present?
+                      div class="small-3 columns size-16"
+                        = @tourist.add_passport_day_issue_five.to_s(:month_and_year)
+                    - else
+                      div class="small-3 columns size-16"
+                        = @tourist.add_passport_day_issue_five
+                div class="large-2 columns"
+                  label = t('validity')
+                  div class="row display"
+                    - if @tourist.add_passport_validity_five.present?
+                      div class="small-3 columns size-16"
+                        = @tourist.add_passport_validity_five.to_s(:month_and_year)
+                    - else
+                      div class="small-3 columns size-16"
+                        = @tourist.add_passport_validity_five
+                div class="large-2 columns"
+                  label = t('Issued by')
+                  div class="row display"
+                    div class="small-4 columns size-16"
+                      = @tourist.add_issued_by_five
+    hr
+    .row
+      div class="large-12 columns"
+        .row
+          div class="large-3 columns"
+            label = t('Country')
+            div class="row display"
+              div class="small-1 columns size-16" = @tourist.country
+          div class="large-1 columns"
+            label = t('Foreign suite')
+            div class="row display" style="width:40pt"
+              div class="small-1 columns size-16" = @tourist.foreign_suite
+          div class="large-2 columns"
+            label = t('Foreign number')
+            div class="row display"
+              div class="small-1 columns size-16" = @tourist.foreign_number
+          div class="large-2 columns"
+            label = t('foreign day issue')
+            div class="row display" 
+              - if @tourist.foreign_day_issue.present?
+                div class="small-1 columns size-16"
+                  = @tourist.foreign_day_issue.to_s(:month_and_year)
+              - else
+                div class="small-1 columns size-16"
+                  = @tourist.foreign_day_issue
+          div class="large-2 columns"
+            label = t('Issued by')
+            div class="row display"
+                div class="small-1 columns size-16"
+                  = @tourist.issued_by
+          div class="large-2 columns"
+            label = t('validity')
+            div class="row display"
+              - if @tourist.validity.present?
+                div class="small-1 columns size-16"
+                  = @tourist.validity.to_s(:month_and_year)
+              - else
+                div class="small-1 columns size-16"
+                  = @tourist.validity
+    hr
+    .row
+      div class="large-12 columns"
+        .row
+          div class="large-3 columns"
+            label = t('City')
+            div class="row display"
+              div class="small-1 columns size-16" = @tourist.city
+          div class="large-3 columns"
+            label = t('Street')
+            div class="row display"
+              div class="small-1 columns size-16" = @tourist.street
+          div class="large-2 columns"
+            label = t('Post index')
+            div class="row display"
+              div class="small-1 columns size-16" = @tourist.post_index
+          div class="large-2 columns"
+            label = t('House')
+            div class="row display"
+              div class="small-1 columns size-16" = @tourist.house
+          div class="large-2 columns"
+            label = t('Apartment')
+            div class="row display"
+              div class="small-1 columns size-16" = @tourist.apartment
+    hr
+    .row
+      div class="large-12 columns"
+        .row
+          div class="large-2 columns"
+            label = t('Phone_mobile')
+            div class="row display" style="width:120pt"
+              div class="small-1 columns size-16" = @tourist.phone_mobile
+          div class="large-5 columns"
+            label = t('Email')
+            div class="row display"
+              div class="small-1 columns size-16" = @tourist.email
+          div class="large-5 columns"
+            label = t('Skype')
+            div class="row display"
+              div class="small-1 columns size-16" = @tourist.skype
+    .row
+      div class="large-12 columns"
+        .row
+          div class="large-2 columns"
+            label = t('Phone_home')
+            div class="row display" style="width:100pt"
+              div class="small-1 columns size-16" = @tourist.phone_home
+          div class="large-3 columns"
+            label = t('Client status')
+            div class="row display"
+              div class="small-9 columns size-16" = @tourist.client_status
+          div class="large-5 columns"
+            label = t('Learned from')
+            div class="row display"
+              div class="small-6 columns size-16" = @tourist.learned_from
+    .row
+      div class="large-12 columns"
+        .row
+          div class="large-2 columns"
+            label = t('Phone_work')
+            div class="row display" style="width:100pt"
+              div class="small-1 columns size-16" = @tourist.phone_work
+          div class="large-5 columns"
+            label = t('Msg sms')
+            div class="row columns"
+              - if @tourist.msg_sms == 1
+                a href="#" class="button success tiny" = t('Ok')
+              - else
+                a href="#" class="button alert tiny" = t('Cancel')
+          div class="large-5 columns"
+            label = t('Msg mail')
+            div class="row columns"
+              - if @tourist.msg_mail == 1
+                a href="#" class="button success tiny" = t('Ok')
+              - else
+                a href="#" class="button alert tiny "= t('Cancel')
+    .row
+      div class="large-12 columns"
+        .row
+          div class="large-12 columns"
+            label = t('Comment')
+            div class="row display"
+              div class="small-12 columns size-16" = @tourist.comment
+    br
+    = link_to t('Edit'), edit_tourist_path(@tourist), class: "btnBordered blueBtnBordered btnbutton", style: "width:150px;max-width:100%;height:42px;padding:10px 10px 10px;"
+    '
+    = link_to t('Back'), tourists_path, class: "btnBordered blueBtnBordered btnbutton", style: "width:150px;max-width:100%;height:42px;padding:10px 10px 10px;"

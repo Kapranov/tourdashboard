@@ -1,0 +1,108 @@
+= simple_form_for(@tourist) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :client, label: false, collection: [t('potential_customers'),t('current_customers')], include_blank: false, prompt: t('Client'), input_html: { style: 'width: 400px'}
+    = f.input :lastname_ua, label: false, placeholder: t('Lastnameua'), input_html: { style: 'width: 400px'}
+    = f.input :firstname_ua, label: false, placeholder: t('Firstnameua'), input_html: { style: 'width: 400px'}
+    = f.input :middlename_ua, label: false, placeholder: t('Middlenameua'), input_html: { style: 'width: 400px'}
+    = f.input :lastname_en, label: false, placeholder: t('Lastnameen'), input_html: { style: 'width: 400px'}
+    = f.input :firstname_en, label: false, placeholder: t('Firstnameen'), input_html: { style: 'width: 400px'}
+    = f.input :day_born, label: false, as: :special_picker, input_html: { :style=> 'width: 400px', class: 'datepicker'}, placeholder: t('Born')
+    = f.input :gender, label: false, collection: [t('Male'), t('Female')], include_blank: false, prompt: t('Gender'), input_html: { style: 'width: 400px'}
+    hr
+      dd style="width:400px;"
+        a href="#panel1"
+          i class="fi-arrows-out size-16" style="float:right"
+          '
+          = t('accompanying')
+        div id="panel1" class="content"
+          h5 class="alert-base custom-bg " = t('accompany_one') 
+          = f.input :add_lastname_en_one, label: false, placeholder: t('Lastnameen_one'), input_html: { style: 'width: 400px'}
+          = f.input :add_firstname_en_one, label: false, placeholder: t('Firstnameen_one'), input_html: { style: 'width: 400px'}
+          = f.input :add_passport_one, label: false, placeholder: t('Passport_one'), input_html: { style: 'width: 400px'}
+          = f.input :add_day_born_one, label: false, placeholder: t('Day_born_one'), as: :special_picker, input_html: { style: 'width: 400px', class: 'datepicker'}
+          = f.input :add_phone_one, label: false, placeholder: t('Phone_mobile_one'), input_html: { style: 'width: 400px'}
+          = f.input :add_passport_day_issue_one, label: false, placeholder: t('Foreign day issue'), as: :special_picker, input_html: { style: 'width: 400px', class: 'datepicker'}
+          = f.input :add_passport_validity_one, label: false, placeholder: t('Validity'), as: :special_picker, input_html: { style: 'width: 400px', class: 'datepicker'}
+          = f.input :add_issued_by_one, label: false, placeholder: t('Issued by'), input_html: { style: 'width: 400px'}
+          h5 class="alert-base custom-bg " = t('accompany_two')
+          = f.input :add_lastname_en_two, label: false, placeholder: t('Lastnameen_two'), input_html: { style: 'width: 400px'}
+          = f.input :add_firstname_en_two, label: false, placeholder: t('Firstnameen_two'), input_html: { style: 'width: 400px'}
+          = f.input :add_passport_two, label: false, placeholder: t('Passport_three'), input_html: { style: 'width: 400px'}
+          = f.input :add_day_born_two, label: false, placeholder: t('Day_born_two'), as: :special_picker, input_html: { :style=> 'width: 400px', class: 'datepicker'}
+          = f.input :add_phone_two, label: false, placeholder: t('Phone_mobile_two'), input_html: { style: 'width: 400px'}
+          = f.input :add_passport_day_issue_two, label: false, placeholder: t('Foreign day issue'), as: :special_picker, input_html: { style: 'width: 400px', class: 'datepicker'}
+          = f.input :add_passport_validity_two, label: false, placeholder: t('Validity'), as: :special_picker, input_html: { style: 'width: 400px', class: 'datepicker'}
+          = f.input :add_issued_by_two, label: false, placeholder: t('Issued by'), input_html: { style: 'width: 400px'}
+          h5 class="alert-base custom-bg " = t('accompany_three')
+          = f.input :add_lastname_en_three, label: false, placeholder: t('Lastnameen_three'), input_html: { style: 'width: 400px'}
+          = f.input :add_firstname_en_three, label: false, placeholder: t('Firstnameen_three'), input_html: { style: 'width: 400px'}
+          = f.input :add_passport_three, label: false, placeholder: t('Passport_three'), input_html: { style: 'width: 400px'}
+          = f.input :add_day_born_three, label: false, placeholder: t('Day_born_three'), as: :special_picker, input_html: { :style=> 'width: 400px', class: 'datepicker'}
+          = f.input :add_phone_three, label: false, placeholder: t('Phone_mobile_three'), input_html: { style: 'width: 400px'}
+          = f.input :add_passport_day_issue_three, label: false, placeholder: t('Foreign day issue'), as: :special_picker, input_html: { style: 'width: 400px', class: 'datepicker'}
+          = f.input :add_passport_validity_three, label: false, placeholder: t('Validity'), as: :special_picker, input_html: { style: 'width: 400px', class: 'datepicker'}
+          = f.input :add_issued_by_three, label: false, placeholder: t('Issued by'), input_html: { style: 'width: 400px'}
+          h5 class="alert-base custom-bg " = t('accompany_four')
+          = f.input :add_lastname_en_four, label: false, placeholder: t('Lastnameen_four'), input_html: { style: 'width: 400px'}
+          = f.input :add_firstname_en_four, label: false, placeholder: t('Firstnameen_four'), input_html: { style: 'width: 400px'}
+          = f.input :add_passport_four, label: false, placeholder: t('Passport_four'), input_html: { style: 'width: 400px'}
+          = f.input :add_day_born_four, label: false, placeholder: t('Day_born_four'), as: :special_picker, input_html: { :style=> 'width: 400px', class: 'datepicker'}
+          = f.input :add_phone_four, label: false, placeholder: t('Phone_mobile_four'), input_html: { style: 'width: 400px'}
+          = f.input :add_passport_day_issue_four, label: false, placeholder: t('Foreign day issue'), as: :special_picker, input_html: { style: 'width: 400px', class: 'datepicker'}
+          = f.input :add_passport_validity_four, label: false, placeholder: t('Validity'), as: :special_picker, input_html: { style: 'width: 400px', class: 'datepicker'}
+          = f.input :add_issued_by_four, label: false, placeholder: t('Issued by'), input_html: { style: 'width: 400px'}
+          h5 class="alert-base custom-bg " = t('accompany_five')
+          = f.input :add_lastname_en_five, label: false, placeholder: t('Lastnameen_five'), input_html: { style: 'width: 400px'}
+          = f.input :add_firstname_en_five, label: false, placeholder: t('Firstnameen_five'), input_html: { style: 'width: 400px'}
+          = f.input :add_passport_five, label: false, placeholder: t('Passport_five'), input_html: { style: 'width: 400px'}
+          = f.input :add_day_born_five, label: false, placeholder: t('Day_born_five'), as: :special_picker, input_html: { :style=> 'width: 400px', class: 'datepicker'}
+          = f.input :add_phone_five, label: false, placeholder: t('Phone_mobile_five'), input_html: { style: 'width: 400px'}
+          = f.input :add_passport_day_issue_five, label: false, placeholder: t('Foreign day issue'), as: :special_picker, input_html: { style: 'width: 400px', class: 'datepicker'}
+          = f.input :add_passport_validity_five, label: false, placeholder: t('Validity'), as: :special_picker, input_html: { style: 'width: 400px', class: 'datepicker'}
+          = f.input :add_issued_by_five, label: false, placeholder: t('Issued by'), input_html: { style: 'width: 400px'}
+    hr
+    = f.input :country, label: false, priority: [ "Ukraine" ], prompt: t('select_country'), include_blank: false, input_html: { style: 'width: 400px'}
+    = f.input :foreign_suite, label: false, placeholder: t('Foreign suite'), input_html: { style: 'width: 400px'}
+    = f.input :foreign_number, label: false, placeholder: t('Foreign number'), input_html: { style: 'width: 400px'}
+    = f.input :foreign_day_issue, label: false, placeholder: t('Foreign day issue'), as: :special_picker, input_html: { :style=> 'width: 400px', class: 'datepicker'}
+    = f.input :issued_by, label: false, placeholder: t('Issued by'), input_html: { style: 'width: 400px'}
+    = f.input :validity, label: false, placeholder: t('Validity'), as: :special_picker, input_html: { :style=> 'width: 400px', class: 'datepicker'}
+    = f.input :city, label: false, placeholder: t('City'), input_html: { style: 'width: 400px'}
+    = f.input :street, label: false, placeholder: t('Street'), input_html: { style: 'width: 400px'}
+    = f.input :post_index, label: false, placeholder: t('Post index'), input_html: { style: 'width: 400px'}
+    = f.input :house, label: false, placeholder: t('House'), input_html: { style: 'width: 400px'}
+    = f.input :apartment, label: false, placeholder: t('Apartment'), input_html: { style: 'width: 400px'}
+    = f.input :phone_mobile, label: false, placeholder: t('Phone_mobile'), input_html: {style: 'width: 400px'}
+    = f.input :phone_home, label: false, placeholder: t('Phone_home'), input_html: { style: 'width: 400px'}
+    = f.input :phone_work, label: false, placeholder: t('Phone_work'), input_html: { style: 'width: 400px'}
+    = f.input :email, label: false, placeholder: t('Email'), input_html: { style: 'width: 400px'}
+    = f.input :skype, label: false, placeholder: t('Skype'), input_html: { style: 'width: 400px'}
+    = f.input :comment, label: false, placeholder: t('Comment'), as: :text, input_html: { style: 'width: 400px'}
+    = f.input :client_status, label: false, collection: [t('new_customer'),t('regular_customer')], include_blank: false, prompt: t('Client status'), input_html: { style: 'width: 400px'}
+    = f.input :learned_from, label: false, collection: [t('advice_of_friends'),t('internet'),t('google'),t('leaflets')], include_blank: false, prompt: t('Learned from'), input_html: { style: 'width: 400px'}
+    h6 = t('Msg sms')
+    '
+    = f.input :msg_sms, label: false, as: :boolean, checked_value: 1, unchecked_value: 0
+    h6 = t('Msg mail')
+    '
+    = f.input :msg_mail, label: false, as: :boolean, checked_value: 1, unchecked_value: 0
+
+
+  .form-actions
+    = f.button :submit, value: t('Save'), class: "btnbutton", style: "width:150px;max-width: 100%;height:42px;padding: 10px 10px 10px;"
+    '
+    = link_to t('Show'), @tourist, class: "btnBordered blueBtnBordered btnbutton", style: "width:150px;max-width:100%;height:42px;padding: 10px 10px 10px;"
+    '
+    = link_to t('Back'), tourists_path, class: "btnBordered blueBtnBordered btnbutton", style: "width:150px;max-width:100%;height:42px;padding: 10px 10px 10px;"
+
+javascript:
+  $('.datepicker').datepicker({
+    format: "dd-mm-yyyy",
+    todayHighlight: true,
+    todayBtn: 'linked',
+    autoclose: true,
+    weekStart: 1,
+    language: "uk"
+  });

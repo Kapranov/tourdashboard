@@ -1,0 +1,31 @@
+.row
+  div class=["small-centered", "columns"] style="top:30pt;width:900px"
+    div class="l-wrap--blog__post_micropost"
+      a class="ad--micropost" href="/"
+        strong class="ad__text_micropost size-24" = t('Listing microposts')
+    table class="large-12"
+      thead
+        tr
+          th = t('author')
+          th = t('email')
+          th = t('review')
+          th
+          th
+          th
+      tbody
+        - @microposts.each do |micropost|
+          tr
+            td class=["field_left"] = micropost.author
+            td = micropost.email
+            td class=["field_left"] = micropost.review
+            td = link_to '<i class="fi-results-demographics size-32"></i>'.html_safe, micropost
+            td = link_to '<i class="fi-pencil size-24"></i>'.html_safe, edit_micropost_path(micropost)
+            td = link_to '<i class="fi-trash size-24"></i>'.html_safe, micropost, data: {:confirm => t('Are you sure?')}, :method => :delete
+    table class="small-centered columns" cellspacing="0" cellpadding="0" style="border-collapse: collapse;border: 0px;width:870px"
+      tbody
+        td
+          ul class="button-group round"
+            li = link_to t('New Micropost'), new_micropost_path, class: "btnBordered blueBtnBordered btnbutton", style: "width:180px;max-width: 100%;"
+            li = link_to t('Tourist'), tourists_path, class: "btnBordered blueBtnBordered btnbutton", style: "width:180px;max-width: 100%;"
+            li = link_to t('Order'), orders_path, class: "btnBordered blueBtnBordered btnbutton", style: "width:180px; max-width: 100%;"
+            li = link_to t('Agency_name'), agencies_path, class: "btnBordered blueBtnBordered btnbutton", style: "width:180px;max-width: 100%;"

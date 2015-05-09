@@ -1,0 +1,76 @@
+.row
+  div class=["small-centered", "columns"] style="top:30pt;width:900px"
+    div class="l-wrap--blog__post_order"
+      a class="ad--order" href="/"
+        strong class="ad__text_order size-24" = t('Listing orders')
+    - if @tourist.present? && @tourist.orders && !@orders.blank?
+    - else
+      div class="row collapse"
+        div class="small-2 large-1 columns"
+          span class="prefix"
+            i class="fi-page-search size-26"
+        div class="small-10 large-11 columns"
+          = form_tag(orders_path, :method => "get", id: "search-form") do
+            = search_field_tag :search, params[:search], placeholder: "#{t('search_order')}", class: 'auto_search'
+            = submit_tag "Search", type: "hidden"
+
+    table class=["large-12"]
+      thead
+        tr
+          th class=["field_left"] width="40"  = t('customer_id')
+          th class=["field_left"] = t('Tourist')
+          th class=["field_left"] width="160" = t('Country')
+          th width="115" = t('Tour_day_begin')
+          th width="115" = t('Tour_day_end')
+          th width="115" = t('Payment_tour')
+          th width="40"
+          th width="40"
+          th width="40"
+      tbody
+        - @orders.each do |order|
+          tr
+            td class=["field_left"] = order.tourist_id
+            td class=["field_left"] = order.tourist
+            td class=["field_left"] = t(order.country)
+            td
+              - if order.tour_day_begin.present?
+                = order.tour_day_begin.to_s(:month_and_year)
+              - else
+                = order.tour_day_begin
+            td
+              - if order.tour_day_end.present?
+                = order.tour_day_end.to_s(:month_and_year)
+              - else
+                = order.tour_day_end
+            td = order.payment_tour
+            td width="44" = link_to '<i class="fi-results-demographics size-32"></i>'.html_safe, [order.tourist, order]
+            td width="44" = link_to '<i class="fi-pencil size-24"></i>'.html_safe, edit_tourist_order_path(order.tourist, order)
+            td width="44" = link_to '<i class="fi-trash size-24"></i>'.html_safe, [order.tourist, order], data: {:confirm => t('Are you sure?')}, :method => :delete
+    - if @orders.present?
+      div class="small-centered large-10 columns"
+        div(data-alert class="alert-box info radius")
+          = t('Order done')
+          = link_to '&times;'.html_safe, '#', :class => 'close'
+    - else
+        div class="small-centered large-11 columns"
+          div(data-alert class="alert-box alert radius")
+            = t('Non order')
+    table class="small-centered columns" cellspacing="0" cellpadding="0" style="border-collapse: collapse;border: 0px;"
+      tbody
+        td
+          div class="flickr_pagination"
+            = paginate @orders
+    table class="small-centered columns" cellspacing="0" cellpadding="0" style="border-collapse: collapse;border: 0px;width:880px"
+      tbody
+        td
+          ul class="button-group round"
+            - if @orders.present?
+              li = link_to t('Tourist'), tourists_path, class: "btnBordered blueBtnBordered btnbutton", style: "width:150pt"
+              li = link_to t('Agency_name'), agencies_path, class: "btnBordered blueBtnBordered btnbutton", style: "width:150pt"
+              li = link_to t('Forum edit'), microposts_path, class: "btnBordered blueBtnBordered btnbutton", style: "width:155pt"
+              li = link_to t('Main'), home_index_path, class: "btnBordered blueBtnBordered btnbutton", style: "width:155pt"
+            - else
+              li = link_to t('New Order'), new_tourist_order_path, class: "btnBordered blueBtnBordered btnbutton", style: "width:155pt"
+              li = link_to t('Tourist'), tourists_path, class: "btnBordered blueBtnBordered btnbutton", style: "width:150pt"
+              li = link_to t('Agency_name'), agencies_path, class: "btnBordered blueBtnBordered btnbutton", style: "width:150pt"
+              li = link_to t('Forum edit'), microposts_path, class: "btnBordered blueBtnBordered btnbutton", style: "width:155pt"

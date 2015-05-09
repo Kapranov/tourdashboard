@@ -1,0 +1,51 @@
+= simple_form_for(@agency) do |f|
+  = f.error_notification
+
+  .form-inputs
+    h5 class="alert-base custom-bg" style="width:400px;" = t('Touragency')
+    = f.input :agency_name, label: false, placeholder: t('agency_name'), input_html: { style: 'width: 400px'}
+    = f.input :agency_pn, label: false, placeholder: t('agency_pn'), input_html: { style: 'width: 400px'}
+    = f.input :agency_edrpoy, label: false, placeholder: t('agency_edrpoy'), input_html: { style: 'width: 400px'}
+    h5 class="alert-base custom-bg" style="width:400px;" = t('physical_address')
+    = f.input :agency_city, label: false, placeholder: t('agency_city'), input_html: { style: 'width: 400px'}
+    = f.input :agency_street, label: false, placeholder: t('agency_street'), input_html: { style: 'width: 400px'}
+    = f.input :agency_post_index, label: false, placeholder: t('agency_post_index'), input_html: { style: 'width: 400px'}
+    = f.input :agency_house, label: false, placeholder: t('agency_house'), input_html: { style: 'width: 400px'}
+    = f.input :agency_apart, label: false, placeholder: t('agency_apart'), input_html: { style: 'width: 400px'}
+    h5 class="alert-base custom-bg" style="width:400px;" = t('legal_address')
+    = f.input :city_legal, label: false, placeholder: t('city_legal'), input_html: { style: 'width: 400px'}
+    = f.input :street_legal, label: false, placeholder: t('street_legal'), input_html: { style: 'width: 400px'}
+    = f.input :post_index_legal, label: false, placeholder: t('post_index_legal'), input_html: { style: 'width: 400px'}
+    = f.input :house_legal, label: false, placeholder: t('house_legal'), input_html: { style: 'width: 400px'}
+    = f.input :apart_legal, label: false, placeholder: t('apart_legal'), input_html: { style: 'width: 400px'}
+    = f.input :agency_phone_work, label: false, placeholder: t('agency_phone_work'), input_html: { style: 'width: 400px'}
+    = f.input :agency_phone_mobile, label: false, placeholder: t('agency_phone_mobile'), input_html: { style: 'width: 400px'}
+    h5 class="alert-base custom-bg" style="width:400px;" = t('agency_contact')
+    = f.input :agency_email_one, label: false, placeholder: t('agency_email_one'), input_html: { style: 'width: 400px'}
+    = f.input :agency_email_two, label: false, placeholder: t('agency_email_two'), input_html: { style: 'width: 400px'}
+    = f.input :agency_email_three, label: false, placeholder: t('agency_email_three'), input_html: { style: 'width: 400px'}
+    = f.input :agency_web, label: false, placeholder: t('agency_web'), input_html: { style: 'width: 400px'}
+    = f.input :agency_comment, label: false, placeholder: t('agency_comment'), input_html: { style: 'width: 400px'}
+    h5 class="alert-base custom-bg" style="width:400px;"  = t('bank_account')
+    = f.input :bank, label: false, placeholder: t('bank'), input_html: { style: 'width: 400px'}
+    = f.input :mfo, label: false, placeholder: t('mfo'), input_html: { style: 'width: 400px'}
+    = f.input :account, label: false, placeholder: t('current_account'), input_html: { style: 'width: 400px'}
+    = f.input :contract_number, label: false, placeholder: t('contract_number'), input_html: { style: 'width: 400px'}
+    = f.input :contract_from, label: false, placeholder: t('contract_from'), as: :special_picker, input_html: { style: 'width: 400px', class: 'datepicker'}
+
+  .form-actions style="width:500px;"
+    = f.button :submit, value: t('Save'), class: "btnbutton", style: "width:150px;max-width: 100%;height:42px;padding: 10px 10px 10px;"
+    '
+    = link_to t('Show'), @agency, class: "btnBordered blueBtnBordered btnbutton", style: "width:150px;max-width:100%;height:42px;padding: 10px 10px 10px;"
+    '
+    = link_to t('Back'), agencies_path, class: "btnBordered blueBtnBordered btnbutton", style: "width:150px;max-width:100%;height:42px;padding: 10px 10px 10px;"
+
+javascript:
+  $('.datepicker').datepicker({
+    format: "dd-mm-yyyy",
+    todayHighlight: true,
+    todayBtn: 'linked',
+    autoclose: true,
+    weekStart: 1,
+    language: "uk"
+  });

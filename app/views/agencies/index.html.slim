@@ -1,0 +1,31 @@
+.row
+  div class=["small-centered", "columns"] style="top:30pt;width:900px"
+    div class="l-wrap--blog__post_agency"
+      a class="ad--agency" href="/"
+        strong class="ad__text_agency size-24" = t('Listing agencies')
+    table class="large-12"
+      thead
+        tr
+          th = t('agency_name')
+          th width="115" = t('Phone work')
+          th = t('Email one')
+          th width="44"
+          th width="44"
+          th width="44"
+      tbody
+        - @agencies.each do |agency|
+          tr
+            td class=["field_left"] = agency.agency_name
+            td = agency.agency_phone_work
+            td class=["field_left"] = mail_to agency.agency_email_one, nil, style: 'font-weight: bold'
+            td = link_to '<i class="fi-results-demographics size-32"></i>'.html_safe, agency
+            td = link_to '<i class="fi-pencil size-24"></i>'.html_safe, edit_agency_path(agency)
+            td = link_to '<i class="fi-trash size-24"></i>'.html_safe, agency, data: {:confirm => t('Are you sure?')}, :method => :delete
+    table class="small-centered columns" cellspacing="0" cellpadding="0" style="border-collapse: collapse;border: 0px;width:870px"
+      tbody
+        td
+          ul class="button-group round"
+            li = link_to t('New Agency'), new_agency_path, class: "btnBordered blueBtnBordered btnbutton", style: "width:180px;max-width: 100%;"
+            li = link_to t('Tourist'), tourists_path, class: "btnBordered blueBtnBordered btnbutton", style: "width:180px;max-width: 100%;"
+            li = link_to t('Order'), orders_path, class: "btnBordered blueBtnBordered btnbutton", style: "width:180px; max-width: 100%;"
+            li = link_to t('Forum edit'), microposts_path, class: "btnBordered blueBtnBordered btnbutton", style: "width:180px;max-width: 100%;"

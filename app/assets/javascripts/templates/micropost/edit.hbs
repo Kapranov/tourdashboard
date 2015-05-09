@@ -1,0 +1,18 @@
+<form {{action 'update' this on="submit"}} >
+  {{#if model.isSaving}}
+    <p>Saving Record</p>
+  {{/if}}
+  <p>
+    {{input type="text" value=model.author}}
+  </p>
+  <p>
+    {{input type="text" value=model.email}}
+  </p>
+  <p>
+    {{textarea value=model.review}}
+  </p>
+  <ul class="button-group radius even-2">
+    <li><button class="button success">Оновлення</button></li>
+    <li><a href="http://response.travelonline.com.ua/chat#/microposts/" class="button warning">Повернутися</a></li>
+  </ul>
+</form>

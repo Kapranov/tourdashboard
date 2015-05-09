@@ -1,0 +1,63 @@
+= simple_form_for([@order.tourist, @order]) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.association :tourist, collection: Tourist.all, label: false, prompt: t('tourist_id'), input_html: { style: 'width: 400px'}
+    = f.input :odd, label: false, placeholder: t('odd'), input_html: { style: 'width: 400px'}
+    = f.input :mark, label: false, placeholder: t('mark'), input_html: { style: 'width: 400px'}
+    = f.input :order_day, label: false, placeholder: t('order_day'), as: :special_picker, input_html: { style: 'width: 400px', class: 'datepicker'}
+    = f.input :country, label: false, prompt: t('country_id'), input_html: { style: 'width: 400px'}
+    = f.input :tour_day_begin, label: false, placeholder: t('tour_day_begin'), as: :special_picker, input_html: { style: 'width: 400px', class: 'datepicker'}
+    = f.input :tour_day_end, label: false, placeholder: t('tour_day_end'), as: :special_picker, input_html: { style: 'width: 400px', class: 'datepicker'}
+    = f.input :night, label: false, prompt: t('night'), collection: 1..31, input_html: { style: 'width: 400px'}
+    = f.input :aircross_begin, label: false, placeholder: t('aircross_begin'), as: :special_picker, input_html: { style: 'width: 400px', class: 'datepicker'}
+    = f.input :aircross_end, label: false, placeholder: t('aircross_end'), as: :special_picker, input_html: { style: 'width: 400px', class: 'datepicker'}
+    = f.input :airtable, label: false, placeholder: t('airtable'), input_html: { style: 'width: 400px'}
+    = f.input :airclass, label: false, prompt: t('airclass'), collection: [t('airclass econom'), t('airclass bussness')], input_html: { style: 'width: 400px'}
+    = f.input :airline, label: false, placeholder: t('airline'), input_html: { style: 'width: 400px'}
+    = f.input :hotel_begin, label: false, placeholder: t('hotel_begin'), as: :special_picker, input_html: { style: 'width: 400px', class: 'datepicker'}
+    = f.input :hotel_end, label: false, placeholder: t('hotel_end'), as: :special_picker, input_html: { style: 'width: 400px', class: 'datepicker'}
+    = f.input :hotel_name, label: false, placeholder: t('hotel_name'), input_html: { style: 'width: 400px'}
+    = f.input :hotel_class, label: false, collection: 1..5, prompt: t('hotel_class'), input_html: { style: 'width: 400px'}
+    = f.input :hotel_city, label: false, placeholder: t('hotel_city'), input_html: { style: 'width: 400px'}
+    = f.input :hotel_pay, label: false, placeholder: t('hotel_room'), input_html: { style: 'width: 400px'}
+    = f.input :hotel_class_room, label: false, prompt: t('hotel_class_food'), collection: ["BB","HB","FB","All","RO"], input_html: { style: 'width: 400px'}
+    = f.input :service_begin, label: false, placeholder: t('service_begin'), as: :special_picker, input_html: { style: 'width: 400px', class: 'datepicker'}
+    = f.input :service_end, label: false, placeholder: t('service_end'), as: :special_picker, input_html: { style: 'width: 400px', class: 'datepicker'}
+    = f.input :service_name, label: false, prompt: t('service'), collection: [t('service_group'), t('service_personal')], input_html: { style: 'width: 400px'}
+    = f.input :medical_begin, label: false, placeholder: t('medical_begin'), as: :special_picker, input_html: { style: 'width: 400px', class: 'datepicker'}
+    = f.input :medical_end, label: false, placeholder: t('medical_end'), as: :special_picker, input_html: { style: 'width: 400px', class: 'datepicker'}
+    = f.input :medical_name, label: false, placeholder: t('medecal_order'), input_html: { style: 'width: 400px'}
+    = f.input :visa_begin, label: false, placeholder: t('visa_begin'), as: :special_picker, input_html: { style: 'width: 400px', class: 'datepicker'}
+    = f.input :visa_end, label: false, placeholder: t('visa_end'), as: :special_picker, input_html: { style: 'width: 400px', class: 'datepicker'}
+    = f.input :visa_need, label: false, prompt: t('visa'), collection: [t('visa_need'), t('visa_nonneed')], input_html: { style: 'width: 400px'}
+    = f.association :agency, collection: Agency.all, label: false, prompt: t('agency_id'), input_html: { style: 'width: 400px'}
+    = f.input :payment_tour, label: false, placeholder: t('payment_for'), input_html: { style: 'width: 400px'}
+    = f.input :payment_currency, label: false, prompt: t('currency_value'), collection: [ "USD", "UAH", "EUR"], input_html: { style: 'width: 400px'}
+    = f.input :sell_tour, label: false, placeholder: t('sell_tour'), input_html: { style: 'width: 400px'}
+    = f.input :sell_currency, label: false, prompt: t('currency_value'), collection: [ "USD", "UAH", "EUR"], input_html: { style: 'width: 400px'}
+    = f.input :operator, label: false, placeholder: t('operator'), input_html: { style: 'width: 400px'}
+    = f.input :operator_currency, label: false, prompt: t('currency_value'), collection: [ "USD", "UAH", "EUR"], input_html: { style: 'width: 400px'}
+    = f.input :in_total, label: false, placeholder: t('in_total'), input_html: { style: 'width: 400px'}
+    = f.input :total_currency, label: false, prompt: t('currency_value'), collection: [ "USD", "UAH", "EUR"], input_html: { style: 'width: 400px'}
+    = f.input :paid, label: false, placeholder: t('paid'), input_html: { style: 'width: 400px'}
+    = f.input :paid_currency, label: false, prompt: t('currency_value'), collection: [ "USD", "UAH", "EUR"], input_html: { style: 'width: 400px'}
+    = f.input :debt, label: false, placeholder: t('debt'), input_html: { style: 'width: 400px'}
+    = f.input :debt_currency, label: false, prompt: t('currency_value'), collection: [ "USD", "UAH", "EUR"], input_html: { style: 'width: 400px'}
+
+  .form-actions style="width:500px;"
+    = f.button :submit, value: t('Save'), class: "btnbutton", style: "width:150px;max-width: 100%;height:42px;padding: 10px 10px 10px;"
+    '
+    = link_to t('Show'), [@order.tourist, @order], class: "btnBordered blueBtnBordered btnbutton", style: "width:150px;max-width:100%;height:42px;padding: 10px 10px 10px;"
+    '
+    = link_to t('Back'), tourist_orders_path(@order.tourist), class: "btnBordered blueBtnBordered btnbutton", style: "width:150px;max-width:100%;height:42px;padding:10px 10px 10px;"
+
+javascript:
+  $('.datepicker').datepicker({
+    format: "dd-mm-yyyy",
+    todayHighlight: true,
+    todayBtn: 'linked',
+    autoclose: true,
+    weekStart: 1,
+    language: "uk"
+  });

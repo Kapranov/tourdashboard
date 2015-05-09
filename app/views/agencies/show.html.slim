@@ -1,0 +1,162 @@
+.row
+  div class=["large-11", "columns"] style="top:30pt"
+    div class="l-wrap--blog__post_agency"
+      a class="ad--agency" href="/"
+        strong class="ad__text_agency size-22" = t('Show agency')
+    .row
+      div class="large-12 columns"
+        .row
+          div class="small-12 columns"
+            label = t('Agency name')
+            div class="row display"
+              div class="small-12 columns size-14"
+                = @agency.agency_name
+    .row
+      div class="large-12 columns"
+        .row
+          div class="small-2 columns"
+            label = t('Agency pn')
+            div class="row display"
+              div class="small-1 columns size-14"
+                = @agency.agency_pn
+          div class="small-2 columns"
+            label = t('Agency edrpoy')
+            div class="row display"
+              div class="small-1 columns size-14"
+                = @agency.agency_edrpoy
+          div class="small-2 columns"
+            label = t('Agency edrpoy')
+            div class="row display"
+              div class="small-1 columns size-14"
+                = @agency.agency_edrpoy
+    .row
+      div class="large-12 columns"
+        .row
+          div class="small-2 columns"
+            label = t('Agency city')
+            div class="row display"
+              div class="small-1 columns size-14"
+                = @agency.agency_city
+          div class="small-2 columns"
+            label = t('Agency street')
+            div class="row display"
+              div class="small-1 columns size-14"
+                = @agency.agency_street
+          div class="small-2 columns"
+            label = t('Agency post index')
+            div class="row display"
+              div class="small-1 columns size-14"
+                = @agency.agency_post_index
+          div class="small-2 columns"
+            label = t('Agency house')
+            div class="row display"
+              div class="small-1 columns size-14"
+                = @agency.agency_house
+          div class="small-2 columns"
+            label = t('Agency apart')
+            div class="row display"
+              div class="small-1 columns size-14"
+                = @agency.agency_apart
+    .row
+      div class="large-12 columns"
+        .row
+          div class="small-2 columns"
+            label = t('City legal')
+            div class="row display"
+              div class="small-1 columns size-14"
+                = @agency.city_legal
+          div class="small-2 columns"
+            label = t('Street legal')
+            div class="row display"
+              div class="small-1 columns size-14"
+                = @agency.street_legal
+          div class="small-2 columns"
+            label = t('Post index legal')
+            div class="row display"
+              div class="small-1 columns size-14"
+                = @agency.post_index_legal
+          div class="small-2 columns"
+            label = t('House legal')
+            div class="row display"
+              div class="small-1 columns size-14"
+                = @agency.house_legal
+          div class="small-2 columns"
+            label = t('Apart legal')
+            div class="row display"
+              div class="small-1 columns size-14"
+                = @agency.apart_legal
+    .row
+      div class="large-12 columns"
+        .row
+          div class="small-2 columns"
+            label = t('Agency phone work')
+            div class="row display"
+              div class="small-1 columns size-14"
+                = @agency.agency_phone_work
+          div class="small-2 columns"
+            label = t('Agency phone mobile')
+            div class="row display"
+              div class="small-1 columns size-14"
+                = @agency.agency_phone_mobile
+          div class="small-2 columns"
+            label = t('Agency email one')
+            div class="row display"
+              div class="small-1 columns size-14"
+                = @agency.agency_email_one
+          div class="small-2 columns"
+            label = t('Agency email two')
+            div class="row display"
+              div class="small-1 columns size-14"
+                = @agency.agency_email_two
+          div class="small-2 columns"
+            label = t('Agency email three')
+            div class="row display"
+              div class="small-1 columns size-14"
+                = @agency.agency_email_three
+          div class="small-2 columns"
+            label = t('Agency web')
+            div class="row display"
+              div class="small-1 columns size-14"
+                = @agency.agency_web
+          div class="small-2 columns"
+            label = t('Agency comment')
+            div class="row display"
+              div class="small-1 columns size-14"
+                = @agency.agency_comment
+    .row
+      div class="large-12 columns"
+        .row
+          div class="small-2 columns"
+            label = t('Bank')
+            div class="row display"
+              div class="small-6 columns size-14"
+                = @agency.bank
+          div class="small-2 columns"
+            label = t('Mfo')
+            div class="row display"
+              div class="small-1 columns size-14"
+                = @agency.mfo
+          div class="small-2 columns"
+            label = t('Account')
+            div class="row display"
+              div class="small-1 columns size-16"
+                = @agency.account
+          div class="small-2 columns"
+            label = t('Contract number:')
+            div class="row display"
+              div class="small-1 columns size-14"
+                = @agency.contract_number
+          div class="small-2 columns"
+            label = t('Contract from')
+            div class="row display"
+              - if @agency.contract_from.present?
+                div class="small-1 columns size-14"
+                  = @agency.contract_from.to_s(:month_and_year)
+              - else
+                div class="small-1 columns size-14"
+                  = @agency.contract_from
+
+    br
+    = link_to t('Edit'), edit_agency_path(@agency), class: "btnBordered blueBtnBordered btnbutton"
+    '
+    = link_to t('Back'), agencies_path, class: "btnBordered blueBtnBordered btnbutton"

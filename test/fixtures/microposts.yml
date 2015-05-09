@@ -1,0 +1,9 @@
+one:
+  author: MyString
+  email: MyString
+  review: MyText
+
+two:
+  author: MyString
+  email: MyString
+  review: MyText

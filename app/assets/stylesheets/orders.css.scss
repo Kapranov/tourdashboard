@@ -1,0 +1,116 @@
+.l-wrap--blog__post_order {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+.ad--order {
+  margin-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  border: 2px solid #fb755a;
+  background-image: url("order.jpg");
+}
+
+.ad--order:before {
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-size: cover;
+  opacity: 0;
+}
+
+.ad--order:hover:before {
+  opacity: 1;
+}
+
+.ad--order:hover .ad__text_order {
+  color: #fb755a;
+}
+
+.ad--order:hover .ad__text_order:before, .ad--order:hover .ad__text_order:after {
+  background-color: #ffffff;
+}
+
+.ad--order:before {
+  background-color: #ffffff;
+}
+
+.ad__text_order {
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-property: color;
+  -moz-transition-property: color;
+  -o-transition-property: color;
+  transition-property: color;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  position: relative;
+  max-width: 340px;
+  width: 90%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 1.33;
+}
+
+@media (min-width: 500px) {
+  .ad__text_order:after, .ad__text_order:before {
+    display: inline-block;
+    position: relative;
+    height: 6px;
+    width: 6px;
+    content: "";
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #fb755a;
+  }
+
+  .ad__text_order:after {
+    top: 15px;
+    right: -30px;
+  }
+
+  .ad__text_order:before {
+    top: 15px;
+    left: -30px;
+  }
+}
+
+.ad__text_order:before, .ad__text_order:after {
+  background-color: #ffffff;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+}
+
+@media (min-width: 500px) {
+  .ad__text_order:before, .ad__text_order:after {
+    position: absolute;
+  }
+}

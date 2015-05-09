@@ -1,0 +1,14 @@
+<form {{action 'create' this on="submit"}} >
+  {{#if model.isSaving}}
+    <p>Збереження запису</p>
+  {{/if}}
+  <hr>
+  <p>{{input type="text" value=model.author placeholder="Автор: зразок Арлинский Ю.М."}}</p>
+  <p>{{input type="text" value=model.email placeholder="Пошта: зразок example@gmail.com"}}</p>
+  <p>{{textarea value=model.review placeholder="Відгук користувача"}}</p>
+  <ul class="button-group radius even-2">
+    <li><button class="button success">Зберегти</button></li>
+    <li><a href="http://response.travelonline.com.ua/chat#/microposts/" class="button warning">Повернутися</a></li>
+  </ul>
+  <hr>
+</form>

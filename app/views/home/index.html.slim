@@ -1,0 +1,76 @@
+.page-template-page-homepage
+  main[role="main"]
+    div class=["master-wrapper-home"]
+      .section id="home-index" style="display: block;"
+        header
+          nav.top-bar[data-topbar]
+            .top-bar-section
+              ul
+                - if current_user
+                  span class="button alert" style="height:43px;top: 0px; margin: 5px 0px 0px 5px; background: rgba(0, 80, 100, 0.5);"
+                    = t('Currently active users')
+                    '
+                    = current_user.username
+                    '
+                    = link_to t('Edit_Profile'), edit_user_path(current_user.id), class: "button success", style:"top: 0px;margin: 0px 5px 0px 5px;font-weight:600;font-size:9pt;"
+                    '
+                    = link_to t('Logout'), :logout, method: :post, class: "button alert", style:"top: 0px;font-weight:600;font-size:9pt;width:130px;"
+                - else
+                  /= link_to "Register", new_user_path
+                  a = link_to t('Login'), :login
+        .row
+          div class="large-12 large-centered columns text-center the-grid"
+            div class="start-exploring show"
+              div class="button"
+                = link_to t('Tourist'), tourists_path, style: "color:white;"
+              div class="bottom-line"
+              div class="right-border"
+              div class="top-border"
+              div class="left-border"
+              div class="bottom-border"
+              div class="rectangle-border"
+            div class="start-exploring show"
+              div class="button"
+                = link_to t('Forum'), '/chat#/microposts', style: "color:white;"
+              div class="bottom-line"
+              div class="right-border"
+              div class="top-border"
+              div class="left-border"
+              div class="bottom-border"
+              div class="rectangle-border"
+            div class="start-exploring show"
+              div class="button"
+                = link_to t('Agency_name'), agencies_path, style: "color:white;"
+              div class="bottom-line"
+              div class="right-border"
+              div class="top-border"
+              div class="left-border"
+              div class="bottom-border"
+              div class="rectangle-border"
+            div class="start-exploring show"
+              div class="button"
+                = link_to t('Forum edit'), microposts_path, style: "color:white;"
+              div class="bottom-line"
+              div class="right-border"
+              div class="top-border"
+              div class="left-border"
+              div class="bottom-border"
+              div class="rectangle-border"
+            div class="start-exploring show"
+              div class="button"
+                = link_to t('Order'), orders_path, style: "color:white;"
+              div class="bottom-line"
+              div class="right-border"
+              div class="top-border"
+              div class="left-border"
+              div class="bottom-border"
+              div class="rectangle-border"
+            div class="start-exploring show"
+              div class="button"
+                = link_to t('Order cash'), 'http://response.travelonline.com.ua:2275', style: "color:white;"
+              div class="bottom-line"
+              div class="right-border"
+              div class="top-border"
+              div class="left-border"
+              div class="bottom-border"
+              div class="rectangle-border"
