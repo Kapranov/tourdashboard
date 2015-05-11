@@ -56,7 +56,7 @@ GEM
       ember-source (>= 1.0, < 2)
       execjs (>= 1.2, < 3)
     bcrypt (3.1.10)
-    binding_of_caller (0.7.3.pre1)
+    binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bootstrap-datepicker-rails (1.4.0)
       railties (>= 3.0)
@@ -77,13 +77,13 @@ GEM
     combined_time_select (1.0.1)
     countries (0.11.3)
       currencies (~> 0.4.2)
-      i18n_data (= 0.7.0)
+      i18n_data (~> 0.6.0)
     country_select (2.2.0)
       countries (~> 0.11.0)
       sort_alphabetical (~> 1.0)
     currencies (0.4.2)
     debug_inspector (0.0.2)
-    ember-data-source (1.0.0.beta.16.1)
+    ember-data-source (1.0.0.beta.17)
       ember-source (~> 1.8)
     ember-handlebars-template (0.1.5)
       barber (>= 0.9.0)
@@ -117,7 +117,7 @@ GEM
     i18n-country-translations (1.2.1)
       i18n (~> 0.5)
       railties (>= 3.0)
-    i18n_data (0.7.0)
+    i18n_data (0.6.3)
     jbuilder (2.2.13)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -204,6 +204,8 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
     ref (1.0.5)
+    responders (2.1.0)
+      railties (>= 4.2.0, < 5)
     sass (3.4.13)
     sass-rails (5.0.3)
       railties (>= 4.0.0, < 5.0)
@@ -266,42 +268,43 @@ PLATFORMS
 DEPENDENCIES
   awesome_print
   bcrypt
-  binding_of_caller (~> 0.7.3.pre1)
+  binding_of_caller
   bootstrap-datepicker-rails
   carrierwave
-  combined_time_select (~> 1.0.1)
+  combined_time_select
   country_select
-  ember-rails (~> 0.18.2)
-  ember-source (~> 1.11.3.1)
-  exception_handler (~> 0.3.45)
-  foundation-icons-sass-rails (~> 3.0.0)
-  foundation-rails (~> 5.5.2.1)
-  friendly_id (~> 5.1.0)
+  ember-rails
+  ember-source
+  exception_handler
+  foundation-icons-sass-rails
+  foundation-rails
+  friendly_id
   hirb
   i18n-country-translations
   jbuilder
   jquery-rails
   kaminari
   local_time
-  lograge (~> 0.3.1)
-  logstash-event (~> 1.2.02)
+  lograge
+  logstash-event
   looksee
   mini_magick
   momentjs-rails
   pry-rails
-  puma (~> 2.11.2)
-  quiet_assets (~> 1.1.0)
+  puma
+  quiet_assets
   rails (= 4.2.1)
   rails_layout
   ransack!
-  sass-rails (~> 5.0.3)
+  responders
+  sass-rails
   simple_form
-  slim-rails (~> 3.0.1)
+  slim-rails
   sorcery
   spring
   sprockets (= 2.12.3)
-  sprockets-rails (~> 2.3.0)
+  sprockets-rails
   sqlite3
   therubyracer
   uglifier
-  web-console (~> 2.1.2)
+  web-console
