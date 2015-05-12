@@ -1,0 +1,93 @@
+@media only print {
+  @page {
+    size: A5;
+    margin: 0;
+  }
+
+  body {
+    /* A5 dimensions */
+    width: auto;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-family: Georgia, serif;
+    background: none;
+    color: black;
+    font-size:  9px;
+  }
+
+  #page {colorwidth: 100%;
+    margin: -10px; padding: 0;
+    background: none;
+  }
+
+  #header, #sidebar, h2#postcomment, form#commentform, #footer {
+    display: none;
+  }
+
+  .entry a:after {
+    content: " [" attr(href) "] ";
+  }
+
+  #printed-attrrticle {
+    border: 1px solid #666;
+    padding: 10px;
+  }
+
+  input {
+    border: none;
+    background: transparent;
+  }
+
+  .input-form {
+    width: 60px;
+    padding: 1px 1px;
+    font-size: 10px;
+  }
+
+  .input-day {
+    width: 14px;
+    font-size: 10px;
+  }
+
+  .input-month {
+    width: 50px;
+    padding: 1px 1px;
+    font-size: 10px;
+  }
+
+  .input-year {
+    width: 15px;
+    padding: 1px 1px;
+    font-size: 10px;
+  }
+
+  .input-surname {
+    width: 250px;
+    padding: 1px 1px;
+    font-size: 10px;
+  }
+
+  .input-trip {
+    width: 400px;
+    padding: 1px 1px;
+    font-size: 10px;
+  }
+
+  .input-sum {
+    width: 250px;
+    padding: 1px 1px;
+    font-size: 10px;
+  }
+
+  .input-hr {
+    width: 45px;
+    padding: 1px 1px;
+    font-size: 10px;
+  }
+
+  .input-cent {
+    width: 14px;
+    padding: 1px 1px;
+    font-size: 10px;
+  }
+}
