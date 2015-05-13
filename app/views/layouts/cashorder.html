@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Lugatex, inc. Oleg G.Kapranov" />
+  <meta name="copyright" content="Lugatex, inc. Copyright (c) 2015" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Cash Order</title>
+  <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" %>
+  <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" %>
+  <%= stylesheet_link_tag "print.css", :media => 'print' %>
+  <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" %>
+  <%= javascript_include_tag 'vendor/modernizr' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+  <style>
+    html, body {
+      margin: 20px;
+      background: #fcfcfc;
+      color: #333333;
+    }
+
+    ::-moz-selection {
+      background: #b3d4fc;
+      text-shadow: none;
+    }
+
+    ::selection {
+      background: #b3d4fc;
+      text-shadow: none;
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    :-moz-any-link:focus {
+      outline: none;
+    }
+
+    :-webkit-any-link:focus {
+      outline: none;
+    }
+
+    :any-link:focus {
+      outline: none;
+    }
+
+    :focus {
+      outline: none;
+    }
+
+    a:focus {
+      outline: none;
+    }
+
+    .btn.active.focus,
+    .btn.active:focus,
+    .btn.focus,
+    .btn.focus:active,
+    .btn:active:focus,
+    .btn:focus {
+      outline: none;
+      outline-offset: none;
+    }
+
+    .ember-application {
+        margin: 20px;
+    }
+
+    label {
+      width: 100px;
+      display: block;
+      float: left;
+      font-size: 15px;
+      margin-top: 5px
+    }
+
+    .lpanel {
+      font-size: 12px;
+      background: #f4f4f4;
+      border: 1px solid #cecece;
+      border-radius: 3px;
+      padding: 5px;
+      width: 450px;
+    }
+
+    .cpanel {
+      font-size: 12px;
+      background: #f4f4f4;
+      border: 1px solid #cecece;
+      border-radius: 3px;
+      padding: 5px;
+      width: 5px;
+    }
+
+    .rpanel {
+      font-size: 12px;
+      background: #f4f4f4;
+      border: 1px solid #cecece;
+      border-radius: 3px;
+      padding: 5px;
+      width: 450px;
+    }
+
+    .date-input {
+      width: 120px;
+    }
+
+    .good {
+      color: green;
+    }
+
+    .bad {
+      color: red;
+    }
+
+    .date {
+      width: 130px;
+    }
+
+    .phone {
+      width: 130px;
+    }
+
+    .tin {
+      width: 130px;
+    }
+
+    .ssn {
+      width: 130px;
+    }
+
+    .info {
+      font-size: 11px;
+      color: #a3a3a3;
+      margin-top: 3px
+    }
+
+    .input-form {
+      border-color: #A94442;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+      width: 60px;
+      height: 20px;
+      padding: 1px 5px;
+      font-size: 10px;
+      color: #555;
+      background-color: #FFF;
+      background-image: none;
+      border: 1px solid #CCC;
+      border-radius: 4px;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+      transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    }
+
+    .input-day {
+      border-color: #A94442;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+      width: 25px;
+      height: 20px;
+      padding: 1px 5px;
+      font-size: 10px;
+      color: #555;
+      background-color: #FFF;
+      background-image: none;
+      border: 1px solid #CCC;
+      border-radius: 4px;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+      transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    }
+
+    .input-month {
+      border-color: #A94442;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+      width: 50px;
+      height: 20px;
+      padding: 1px 5px;
+      font-size: 10px;
+      color: #555;
+      background-color: #FFF;
+      background-image: none;
+      border: 1px solid #CCC;
+      border-radius: 4px;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+      transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    }
+
+    .input-year {
+      border-color: #A94442;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+      width: 25px;
+      height: 20px;
+      padding: 1px 5px;
+      font-size: 10px;
+      color: #555;
+      background-color: #FFF;
+      background-image: none;
+      border: 1px solid #CCC;
+      border-radius: 4px;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+      transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    }
+
+    .input-surname {
+      border-color: #A94442;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+      width: 250px;
+      height: 20px;
+      padding: 1px 5px;
+      font-size: 10px;
+      color: #555;
+      background-color: #FFF;
+      background-image: none;
+      border: 1px solid #CCC;
+      border-radius: 4px;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+      transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    }
+
+    .input-trip {
+      border-color: #A94442;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+      width: 350px;
+      height: 20px;
+      padding: 1px 5px;
+      font-size: 10px;
+      color: #555;
+      background-color: #FFF;
+      background-image: none;
+      border: 1px solid #CCC;
+      border-radius: 4px;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+      transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    }
+
+    .input-sum {
+      border-color: #A94442;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+      width: 250px;
+      height: 20px;
+      padding: 1px 5px;
+      font-size: 10px;
+      color: #555;
+      background-color: #FFF;
+      background-image: none;
+      border: 1px solid #CCC;
+      border-radius: 4px;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+      transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    }
+
+    .input-hr {
+      border-color: #A94442;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+      width: 50px;
+      height: 20px;
+      padding: 1px 5px;
+      font-size: 10px;
+      color: #555;
+      background-color: #FFF;
+      background-image: none;
+      border: 1px solid #CCC;
+      border-radius: 4px;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+      transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    }
+
+    .input-cent {
+      border-color: #A94442;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+      width: 25px;
+      height: 20px;
+      padding: 1px 5px;
+      font-size: 10px;
+      color: #555;
+      background-color: #FFF;
+      background-image: none;
+      border: 1px solid #CCC;
+      border-radius: 4px;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+      transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    }
+
+    .color1 {
+      color: #fff;
+    }
+
+    .size16 {
+      font-size: 16pt;
+    }
+
+    .width75 {
+      width: 75px
+    }
+
+    .width90 {
+      width: 90px
+    }
+
+    .width95 {
+      width: 95px
+    }
+  </style>
+</head>
+<body>
+  <%= yield %>
+</body>
+</html>
