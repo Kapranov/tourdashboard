@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'cashorder/Index'
-
+  get  'cashorder/index'
   get  'chat/index'
   get  'errors/error404'
   get  'errors/error422'
